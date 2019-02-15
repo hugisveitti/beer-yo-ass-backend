@@ -49,14 +49,31 @@ public class User implements UserDetails {
     private Set<Role> roles;
 
 
+    @ManyToMany
+    @JoinTable(
+            name = "favorite_beers",
+            joinColumns = @JoinColumn(
+                    name = "users", referencedColumnName = "user_id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "beers", referencedColumnName = "beer_id"))
+    private Set<Beer> favoriteBeers;
+
+
+    @ManyToMany
+    @JoinTable(
+            name = "want_to_try",
+            joinColumns = @JoinColumn(
+                    name = "users", referencedColumnName = "user_id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "beers", referencedColumnName = "beer_id"))
+    private Set<Beer> wantToTryBeers;
+
 
     public User(){}
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-
-        //maybe change, 100 to begin with
 
         this.enabled = true;
     }

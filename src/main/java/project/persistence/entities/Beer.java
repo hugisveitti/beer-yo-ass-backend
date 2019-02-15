@@ -1,6 +1,7 @@
 package project.persistence.entities;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Beeeeeeeeeeeeeeers are what the app is about.
@@ -36,6 +37,9 @@ public class Beer {
 
     @Column(name = "beer_price")
     private int price;
+
+
+
 
 
     public Long getBeerId() {
