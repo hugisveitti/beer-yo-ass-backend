@@ -16,9 +16,9 @@ When all the dependencies are downloaded, you can run the project by running the
 ### Populating the beer database
 You have to have installed a couple of python packages
 ```$xslt
-pip psycopg2
-pip selenium
-pip bs4
+pip install psycopg2
+pip install selenium
+pip install bs4
 ```
 
 Then you need to go into the scraper folder and run
