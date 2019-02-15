@@ -33,14 +33,14 @@ file = open("../data.json")
 beers = json.load(file)
 
 for beer in beers:
-    print(beer)
-    print()
+    # print(beer)
+    # print()
     beer_name = beer['title']
     beer_link = beer['link_to_vinbudin']
     beer_id = int(beer['product_number'])
     # prosentu merki
-    print(beer['alcohol'])
-    print(beer['alcohol'][:-1])
+    # print(beer['alcohol'])
+    # print(beer['alcohol'][:-1])
     beer_alcohol = float(beer['alcohol'][:-1])
 
     #kemur bil svo ml
@@ -49,5 +49,5 @@ for beer in beers:
     beer_taste = beer['taste']
     # kemur bil og svo kr. i price
     beer_price = beer['price'][:-4]
-    print(beer_name, beer_link, beer_id, beer_alcohol, beer_volume, beer_taste, beer_price)
+    # print(beer_name, beer_link, beer_id, beer_alcohol, beer_volume, beer_taste, beer_price)
     insert_beers([(beer_name, beer_link, beer_id, beer_alcohol, beer_volume, beer_taste, beer_price)])
