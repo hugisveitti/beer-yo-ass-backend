@@ -16,15 +16,18 @@ When all the dependencies are downloaded, you can run the project by running the
 ### Populating the beer database
 You have to have installed a couple of python packages
 ```$xslt
-pip psycopg2
-pip selenium
-pip bs4
+pip install psycopg2
+pip install selenium
+pip install bs4
 ```
+You have to have firefox.
 
 Then you need to go into the scraper folder and run
 ```$xslt
 python vinbud_scraper.py
 ```
+
+Then you have to turn on your postgres database server, with user:postgres, pw:postgres, and create a database named beer-yo-ass
 
 Then go into database folder and run
 ```$xslt
