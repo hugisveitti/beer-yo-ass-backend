@@ -17,10 +17,16 @@ public interface BeerService {
 
     /**
      * Find a {@link Beer} based on {@link String name}
-     * @param name
+     * @param name {@link String name} to be found
      * @return a {@link Beer} with name {@link String name}
      */
     Beer findByName(String name);
+
+    /**
+     * Find a {@link Beer} based on {@link Long id}
+     * @return a {@link Beer} with the id {@link String id}
+     */
+    Beer findById(Long id);
 
 
 
