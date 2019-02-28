@@ -2,7 +2,9 @@ package project.service.Implementation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import project.persistence.entities.Beer;
 import project.persistence.entities.Comment;
+import project.persistence.entities.User;
 import project.persistence.repositories.CommentRepository;
 import project.service.CommentService;
 
@@ -18,12 +20,18 @@ public class CommentServiceImplementation implements CommentService {
         this.commentRepository = commentRepository;
     }
 
-    List<Comment> findByBeerId(Long beerId){
-        return commentRepository.findByBeerId(beerId);
+    public List<Comment> findByBeer(Beer beer){
+        return commentRepository.findByBeer(beer);
     }
 
-    List<Comment> findByUserId(Long userId){
-        return commentRepository.findByUserId(userId);
+    public List<Comment> findByUser(User user){
+        return commentRepository.findByUser(user);
     }
+
+
+    public Comment save(Comment comment){
+        return commentRepository.save(comment);
+    }
+
 
 }

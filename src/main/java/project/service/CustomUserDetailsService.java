@@ -52,4 +52,5 @@ public interface CustomUserDetailsService extends UserDetailsService {
     User findByUsername(String username) throws UsernameNotFoundException;
 
 
+    User login(String username, String password) throws UsernameNotFoundException;
 }

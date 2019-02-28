@@ -68,6 +68,17 @@ public class User implements UserDetails {
                     name = "beers", referencedColumnName = "beer_id"))
     private Set<Beer> wantToTryBeers;
 
+//    @OneToMany
+//    @JoinTable(
+//            name = "user_comments",
+//            joinColumns = @JoinColumn(
+//                    name = "user_id", referencedColumnName = "user_id"),
+//            inverseJoinColumns = @JoinColumn(
+//                    name = "comment_id", referencedColumnName = "comment_id"))
+
+    @OneToMany(mappedBy = "user")
+    private Set<Comment> comments;
+
 
     public User(){}
 

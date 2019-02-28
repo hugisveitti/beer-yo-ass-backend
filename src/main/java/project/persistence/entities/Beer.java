@@ -38,6 +38,17 @@ public class Beer {
     @Column(name = "beer_price")
     private int price;
 
+//    @OneToMany
+//    @JoinTable(
+//            name = "beer_comments",
+//            joinColumns = @JoinColumn(
+//                    name = "beer_id", referencedColumnName = "beer_id"),
+//            inverseJoinColumns = @JoinColumn(
+//                    name = "comment_id", referencedColumnName = "comment_id"))
+//    private Set<Comment> comments;
+
+    @OneToMany(mappedBy = "beer")
+    private Set<Comment> comments;
 
 
 

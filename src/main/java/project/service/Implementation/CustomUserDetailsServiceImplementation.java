@@ -74,6 +74,10 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     }
 
 
+    public User login(String username, String password){
+        throw new UsernameNotFoundException("Username not found");
+    }
+
     @Override
     public User findOne(Long id) {
         return repository.findOne(id);
@@ -85,5 +89,7 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     public User findByUsername(String username) throws UsernameNotFoundException {
         return repository.findByUsername(username);
     }
+
+
 
 }

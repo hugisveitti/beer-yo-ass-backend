@@ -1,11 +1,15 @@
 package project.persistence.entities;
 
+
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "comments")
 public class Comment {
-
 
 
     @Id
@@ -13,13 +17,17 @@ public class Comment {
     @Column(name = "comment_id")
     private Long commentId;
 
-    @OneToOne
-    @JoinColumn(name="user_id")
-    private long user_id;
 
-    @OneToOne
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="user_id")
+    private User user;
+
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="beer_id")
-    private long beer_id;
+    private Beer beer;
 
     @Column(name="title")
     private String title;
@@ -31,7 +39,7 @@ public class Comment {
     private float stars;
 
     @Column(name="date")
-    private String date;
+    private Date date;
 
     public Long getCommentId() {
         return commentId;
@@ -41,21 +49,7 @@ public class Comment {
         this.commentId = commentId;
     }
 
-    public long getUser_id() {
-        return user_id;
-    }
 
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
-    }
-
-    public long getBeer_id() {
-        return beer_id;
-    }
-
-    public void setBeer_id(long beer_id) {
-        this.beer_id = beer_id;
-    }
 
     public String getTitle() {
         return title;
@@ -79,5 +73,30 @@ public class Comment {
 
     public void setStars(float stars) {
         this.stars = stars;
+    }
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Beer getBeer() {
+        return beer;
+    }
+
+    public void setBeer(Beer beer) {
+        this.beer = beer;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
