@@ -89,7 +89,6 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     }
 
 
-    //paeling ad eyda thessu og nota bara loadByUsername, eda lata thetta bara skila id hja usernum eda ehv
     @Override
     public User findByUsername(String username) throws UsernameNotFoundException {
         return repository.findByUsername(username);

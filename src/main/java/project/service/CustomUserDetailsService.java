@@ -48,7 +48,7 @@ public interface CustomUserDetailsService extends UserDetailsService {
      * @param username {@link String}
      * @return A {@link User} with the {@link String username} passed
      */
-    //maybe delete this, because UserDetailsService has method loadByUsername
+
     User findByUsername(String username) throws UsernameNotFoundException;
 
 

@@ -34,3 +34,55 @@ Then go into database folder and run
 python createTables.py
 python insertData.py
 ```
+
+## Apinn
+note, this application is not secure, maybe we will implement a secure app later.
+<br />
+Every respone is a String unless other is written.
+### get beers
+send a get request to 
+<br />
+/beers
+<br />
+to get a list of all the beers.
+
+### get a beer
+send a get request to 
+<br />
+/beers/beer
+<br />
+to get the following information about one beer
+<br />
+beerId, name, 
+linkToVinbudin, 
+(float) alcohol, 
+taste (e.g. lager, IPA),
+(int) volume (in ml),
+(float) stars (out of 5),
+(int) price (kr.)
+
+### login
+send a post request to 
+<br />
+/login/{username}/{password}
+<br />
+if the username and password match the response will be (boolean) true otherwise false.
+<br />
+### signup
+send a post request to 
+<br />
+/signup/{username}/{password}
+<br />
+if the username is not taken, the response is (boolean) true otherwise false.
+### comment
+send a post request to 
+<br />
+/comment/{username}/{beer}/{title}/{comment}/{stars}/
+<br />
+username is the user logged in, 
+beer is the beer being commented on,
+title is the title of the comment,
+comment is what the user writes about the beer,
+stars (float) how many stars out of 5 the user rates the beer.
+<br />
+response will be (boolean) true if comment was saved otherwise false.

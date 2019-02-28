@@ -5,7 +5,7 @@ package project.persistence.entities;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Table(name = "comments")
@@ -17,13 +17,9 @@ public class Comment {
     @Column(name = "comment_id")
     private Long commentId;
 
-
-
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
-
-
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="beer_id")
@@ -38,8 +34,18 @@ public class Comment {
     @Column(name="stars")
     private float stars;
 
-    @Column(name="date")
+    @Column(name="date", insertable = false, updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
+
+
+    public Comment(User user, Beer beer, String title, String comment, float stars){
+        this.user = user;
+        this.beer = beer;
+        this.title = title;
+        this.comment = comment;
+        this.stars = stars;
+    }
 
     public Long getCommentId() {
         return commentId;
