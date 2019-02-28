@@ -48,12 +48,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeRequests().antMatchers("/","/signup","/logout").permitAll()
-                .antMatchers("/sendbet","/userpage").hasRole("USER")
                 .and()
                 .formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/userpage").failureUrl("/login?error=true")
                 .and()
                 .logout().deleteCookies("remove").invalidateHttpSession(true).logoutSuccessUrl("/").permitAll();
-
+//        http
+//                .antMatcher("/**")
+//                .authorizeRequests()
+//                .antMatchers("/", "/login**")
+//                .permitAll()
+//                .anyRequest()
+//                .authenticated();
 
         //virkar ekki
         //http.exceptionHandling().authenticationEntryPoint(new Http403ForbiddenEntryPoint());

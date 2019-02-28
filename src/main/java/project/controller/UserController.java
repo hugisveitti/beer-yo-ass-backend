@@ -27,11 +27,30 @@ public class UserController {
 //    @PostMapping(value = "/login")
     @RequestMapping(value="/login/{username}/{password}")
     @ResponseBody
-    public User login(@PathVariable String username, @PathVariable String password){
+    public boolean login(@PathVariable String username, @PathVariable String password){
         System.out.println(username + " " + password);
 
-        return new User(username, password);
+        //ekki secure!!!
+        return customUserDetailsService.login(username, password);
     }
+
+
+    @RequestMapping(value="/signup/{username}/{password}")
+    @ResponseBody
+    public boolean signup(@PathVariable String username, @PathVariable String password){
+        System.out.println(username + " " + password);
+
+        User user = new User(username, password);
+        try{
+            customUserDetailsService.save(user);
+            return true;
+        }catch (Exception e) {
+            System.out.println(e);
+            //ef return false tha er username fratekid...
+            return false;
+        }
+    }
+
 
 
 

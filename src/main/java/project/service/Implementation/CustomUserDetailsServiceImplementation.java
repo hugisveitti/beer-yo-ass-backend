@@ -74,8 +74,13 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     }
 
 
-    public User login(String username, String password){
-        throw new UsernameNotFoundException("Username not found");
+    public boolean login(String username, String password){
+        User user = repository.findByUsername(username);
+        if(user == null){
+            return false;
+        }
+        boolean mat = passwordEncoder.matches(password, user.getPassword());
+        return mat;
     }
 
     @Override
