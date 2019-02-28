@@ -43,17 +43,17 @@ public class BeerController {
     return beerService.findAll();
     }
 
-    @RequestMapping("/beers/{beer}")
+    @RequestMapping("/beers/{beerId}")
     @ResponseBody
-    public Beer getBeer(@PathVariable String beer){
-        return beerService.findByName(beer);
+    public Beer getBeer(@PathVariable Long beerId){
+        return beerService.findById(beerId);
     }
 
-    @RequestMapping("/comment/{username}/{beer}/{title}/{comment}/{stars}/")
+    @RequestMapping("/comment/{username}/{beerId}/{title}/{comment}/{stars}/")
     @ResponseBody
-    public boolean comment(@PathVariable String username, @PathVariable String beer, @PathVariable String title, @PathVariable String comment, @PathVariable float stars){
+    public boolean comment(@PathVariable String username, @PathVariable Long beerId, @PathVariable String title, @PathVariable String comment, @PathVariable float stars){
         User currUser = customUserDetailsService.findByUsername(username);
-        Beer currBeer = beerService.findByName(beer);
+        Beer currBeer = beerService.findById(beerId);
         Comment newComment = new Comment(currUser, currBeer, title, comment, stars);
         commentService.save(newComment);
         // todo gera ehv ef saveast ekki.......

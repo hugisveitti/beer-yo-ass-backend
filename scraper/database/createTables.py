@@ -15,7 +15,8 @@ def create_tables():
             beer_volume INTEGER,
             beer_taste VARCHAR(255),
             beer_stars FLOAT,
-            beer_price INTEGER
+            beer_price INTEGER,
+            beer_votes INTEGER
         )
         """)
 
@@ -81,9 +82,10 @@ def create_tables():
         params = config()
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
-        for command in commands:
-            print("ass")
-            cur.execute(command)
+        cur.execute(commands)
+        # for command in commands:
+        #     print("ass")
+        #     cur.execute(command)
         cur.close()
         conn.commit()
     except (Exception, psycopg2.DatabaseError) as err:

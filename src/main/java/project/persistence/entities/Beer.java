@@ -32,8 +32,11 @@ public class Beer {
     @Column(name = "beer_volume")
     private int volume;
 
-   @Column(name = "beer_stars")
-    private float stars;
+    @Column(name = "beer_stars")
+    private float stars=-1;
+
+    @Column(name = "beer_votes")
+    private int votes=0;
 
     @Column(name = "beer_price")
     private int price;
@@ -92,13 +95,29 @@ public class Beer {
         this.volume = volume;
     }
 
-//    public float getStars() {
-//        return stars;
-//    }
-//
-//    public void setStars(float stars) {
-//        this.stars = stars;
-//    }
+    public float getStars() {
+        return stars;
+    }
+
+    public void setStars(float stars) {
+        this.stars = stars;
+    }
+
+    public int getVotes() {
+        return votes;
+    }
+
+    public void setVotes(int votes) {
+        this.votes = votes;
+    }
+
+    public Set<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments) {
+        this.comments = comments;
+    }
 
     public int getPrice() {
         return price;

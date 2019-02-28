@@ -44,22 +44,25 @@ send a get request to
 <br />
 /beers
 <br />
-to get a list of all the beers.
+to get a response as a list of all the beers.
 
 ### get a beer
 send a get request to 
 <br />
-/beers/beer
+/beers/beerId
 <br />
-to get the following information about one beer
+beerId (Long) is the id of the beer, alsways 5 digits,
+<br />
+get a response following information about one beer
 <br />
 beerId, name, 
 linkToVinbudin, 
 (float) alcohol, 
 taste (e.g. lager, IPA),
 (int) volume (in ml),
-(float) stars (out of 5),
-(int) price (kr.)
+(int) price (kr.),
+votes (int) how many times the beer has been voted on,
+(float) stars (out of 5) if never voted on the value will be -1.
 
 ### login
 send a post request to 
@@ -77,12 +80,16 @@ if the username is not taken, the response is (boolean) true otherwise false.
 ### comment
 send a post request to 
 <br />
-/comment/{username}/{beer}/{title}/{comment}/{stars}/
+/comment/{username}/{beerId}/{title}/{comment}/{stars}/
 <br />
 username is the user logged in, 
-beer is the beer being commented on,
+beerId (Long) is the beer being commented on (always 5 digits),
 title is the title of the comment,
 comment is what the user writes about the beer,
 stars (float) how many stars out of 5 the user rates the beer.
 <br />
 response will be (boolean) true if comment was saved otherwise false.
+
+
+#TODO
+possible to update the beers tables with scraper so comments stay with their beers.
