@@ -22,9 +22,8 @@ public class Beer {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "beer_id")
-    private Long beerId;
+    private String beerId;
 
     @Column(name = "beer_name")
     private String name;
@@ -63,11 +62,11 @@ public class Beer {
 
 
 
-    public Long getBeerId() {
+    public String getBeerId() {
         return beerId;
     }
 
-    public void setBeerId(Long beerId) {
+    public void setBeerId(String beerId) {
         this.beerId = beerId;
     }
 
@@ -141,6 +140,11 @@ public class Beer {
         comment.setBeer(null);
     }
 
+    /*
+    verðum að nota ObjectNode og sækja sérstakt json sem er getComments,
+    því ef við notum comment beint þá er það með reference í user, sem er með reference í comment
+    o.s.frv. endalaust.
+     */
     public List<ObjectNode> getPrettyComments(){
         List<ObjectNode> allComments = new ArrayList<>();
         for(int i=0; i<comments.size();i++){
@@ -161,6 +165,9 @@ public class Beer {
         this.price = price;
     }
 
+    /*
+    Verð að nota þetta ObjectNode þar sem það virkar ekki að senda JSONbeer
+     */
     public ObjectNode getJSONBeer(){
         final ObjectMapper mapper = new ObjectMapper();
         ObjectNode jsonBeer = mapper.createObjectNode();
@@ -169,22 +176,17 @@ public class Beer {
             jsonBeer.put("stars", stars);
             jsonBeer.put("alcohol", alcohol);
             jsonBeer.put("volume", volume);
+            jsonBeer.put("linkToVinbudin", linkToVinbudin);
+            jsonBeer.put("taste", taste);
+            jsonBeer.put("price", price);
+            jsonBeer.put("beerId",beerId);
             System.out.println(getPrettyComments());
             jsonBeer.putArray("comments").addAll(getPrettyComments());
-
-
             return jsonBeer;
         }catch (Exception e){
             System.out.println(e);
             return jsonBeer;
         }
-
     }
-
-
-
-
-
-
 
 }

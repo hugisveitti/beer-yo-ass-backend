@@ -1,5 +1,6 @@
 package project.persistence.entities;
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -150,6 +151,14 @@ public class User implements UserDetails {
 
     public List<Beer> getMyBeers() {
         return myBeers;
+    }
+
+    public List<ObjectNode> getObjectNodeMyBeers(){
+        List<ObjectNode> allBeers = new ArrayList<>();
+        for(int i=0; i<myBeers.size(); i++){
+            allBeers.add(myBeers.get(i).getJSONBeer());
+        }
+        return allBeers;
     }
 
     public void addToMyBeers(Beer beer){

@@ -27,7 +27,7 @@ public class BeerServiceImplementation implements BeerService {
         return beerRepository.findByName(name);
     }
 
-    public Beer findById(Long id){
+    public Beer findById(String id){
         return beerRepository.findByBeerId(id);
     }
 }

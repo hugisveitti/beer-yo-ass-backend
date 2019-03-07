@@ -2,6 +2,7 @@ package project.service;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import project.persistence.entities.Beer;
 import project.persistence.entities.User;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -53,4 +54,7 @@ public interface CustomUserDetailsService extends UserDetailsService {
 
 
     boolean login(String username, String password) throws UsernameNotFoundException;
+
+
+    boolean addToMyBeers(String username, Beer beer);
 }

@@ -1,11 +1,14 @@
 package project.controller;
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import project.persistence.entities.User;
+import project.service.BeerService;
 import project.service.CustomUserDetailsService;
 
+import java.util.List;
 
 
 /**
@@ -17,11 +20,13 @@ import project.service.CustomUserDetailsService;
 public class UserController {
 
     private CustomUserDetailsService customUserDetailsService;
+    private BeerService beerService;
     // Dependency Injection
 
     @Autowired
-    public UserController(CustomUserDetailsService customUserDetailsService) {
+    public UserController(CustomUserDetailsService customUserDetailsService, BeerService beerService) {
         this.customUserDetailsService = customUserDetailsService;
+        this.beerService = beerService;
     }
 
 //    @PostMapping(value = "/login")
@@ -49,5 +54,21 @@ public class UserController {
             //ef return false tha er username fratekid...
             return false;
         }
+    }
+
+
+    @RequestMapping(value="/addToMyBeers/{username}/{beerId}")
+    @ResponseBody
+    public boolean addToMyBeers(@PathVariable String username, @PathVariable String beerId){
+        customUserDetailsService.addToMyBeers(username, beerService.findById(beerId));
+        return true;
+    }
+
+
+
+    @RequestMapping(value="/myBeers/{username}")
+    @ResponseBody
+    public List<ObjectNode> myBeers(@PathVariable String username){
+        return customUserDetailsService.findByUsername(username).getObjectNodeMyBeers();
     }
 }

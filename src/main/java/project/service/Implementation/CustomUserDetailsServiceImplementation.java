@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import project.persistence.entities.Beer;
 import project.persistence.entities.Role;
 import project.persistence.repositories.RoleRepository;
 import project.persistence.entities.User;
@@ -95,5 +96,9 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     }
 
 
-
+    public boolean addToMyBeers(String username, Beer beer){
+        User user = repository.findByUsername(username);
+        user.addToMyBeers(beer);
+        return true;
+    }
 }

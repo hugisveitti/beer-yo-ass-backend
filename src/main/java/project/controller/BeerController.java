@@ -71,13 +71,5 @@ public class BeerController {
 
     }
 
-    @RequestMapping(value="/addToMyBeers/{username}/{beerId}")
-    @ResponseBody
-    public boolean addToMyBeers(@PathVariable String username){
-
-        return true;
-    }
-
-
 
 }

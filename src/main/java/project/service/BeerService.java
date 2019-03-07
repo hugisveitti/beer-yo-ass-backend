@@ -23,10 +23,10 @@ public interface BeerService {
     Beer findByName(String name);
 
     /**
-     * Find a {@link Beer} based on {@link Long id}
+     * Find a {@link Beer} based on {@link String id}
      * @return a {@link Beer} with the id {@link String id}
      */
-    Beer findById(Long id);
+    Beer findById(String id);
 
 
 

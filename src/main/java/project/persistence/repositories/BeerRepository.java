@@ -11,7 +11,7 @@ public interface BeerRepository extends JpaRepository<Beer, Long> {
 
     Beer findByName(String name);
 
-    Beer findByBeerId(Long id);
+    Beer findByBeerId(String id);
 
     List<Beer> findAll();
 }
