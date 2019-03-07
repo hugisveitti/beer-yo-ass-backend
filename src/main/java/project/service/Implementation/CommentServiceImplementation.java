@@ -8,7 +8,9 @@ import project.persistence.entities.User;
 import project.persistence.repositories.CommentRepository;
 import project.service.CommentService;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class CommentServiceImplementation implements CommentService {
@@ -30,6 +32,26 @@ public class CommentServiceImplementation implements CommentService {
 
 
     public Comment save(Comment comment){
+        Beer beer = comment.getBeer();
+
+        float beerStars = beer.getStars();
+        int beerVotes = beer.getVotes();
+        if(comment.getStars() >= 0 && comment.getStars() <= 5){
+            if(beerVotes == 0){
+                beerStars = comment.getStars();
+            } else {
+                // held ad thetta se rett formula til ad reikna beer stars.
+                beerStars = (beerStars * beerVotes + comment.getStars()) / (beerVotes + 1);
+            }
+            beer.setStars(beerStars);
+        }
+
+        comment.setDate(new Date());
+
+        beer.addComment(comment);
+        User user = comment.getUser();
+        user.addComment(comment);
+
         return commentRepository.save(comment);
     }
 

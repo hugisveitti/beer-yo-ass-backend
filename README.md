@@ -51,7 +51,7 @@ send a get request to
 <br />
 /beers/beerId
 <br />
-beerId (Long) is the id of the beer, alsways 5 digits,
+beerId (Long) is the id of the beer,
 <br />
 get a response following information about one beer
 <br />
@@ -80,13 +80,13 @@ if the username is not taken, the response is (boolean) true otherwise false.
 ### comment
 send a post request to 
 <br />
-/comment/{username}/{beerId}/{title}/{comment}/{stars}/
+/comment/{username}/{beerId}/{title}/{comment}/{stars}
 <br />
 username is the user logged in, 
-beerId (Long) is the beer being commented on (always 5 digits),
+beerId (Long) is the beer being commented on,
 title is the title of the comment,
 comment is what the user writes about the beer,
-stars (float) how many stars out of 5 the user rates the beer.
+stars (float) how many stars out of 5 the user rates the beer. If stars is lower than zero then the stars don't go into the database.
 <br />
 response will be (boolean) true if comment was saved otherwise false.
 

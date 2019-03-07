@@ -4,7 +4,7 @@ import json
 
 def insert_beers(beers):
     """ insert multiple beers into the beers table """
-    sql = "INSERT INTO beers(beer_name, beer_link, beer_id, beer_alcohol, beer_volume, beer_taste, beer_price, beer_votes, beer_stars) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO beers(beer_name, beer_link, beer_id, beer_alcohol, beer_volume, beer_taste, beer_price, beer_stars) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
     conn = None
     try:
         # read database configuration
@@ -51,5 +51,6 @@ for beer in beers:
     beer_price = beer['price'][:-4]
     beer_stars = -1;
     beer_votes = 0;
+    # aetla ekki nota beervotess..........
     # print(beer_name, beer_link, beer_id, beer_alcohol, beer_volume, beer_taste, beer_price)
-    insert_beers([(beer_name, beer_link, beer_id, beer_alcohol, beer_volume, beer_taste, beer_price, beer_votes, beer_stars)])
+    insert_beers([(beer_name, beer_link, beer_id, beer_alcohol, beer_volume, beer_taste, beer_price, beer_stars)])

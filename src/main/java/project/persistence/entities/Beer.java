@@ -1,13 +1,22 @@
 package project.persistence.entities;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
  * Beeeeeeeeeeeeeeers are what the app is about.
  */
 
-@Entity
+@Entity(name="Beer")
 @Table(name="beers")
 public class Beer {
 
@@ -35,14 +44,21 @@ public class Beer {
     @Column(name = "beer_stars")
     private float stars=-1;
 
-    @Column(name = "beer_votes")
-    private int votes=0;
+//    @Column(name = "beer_votes")
+//    private int votes=0;
 
     @Column(name = "beer_price")
     private int price;
 
-    @OneToMany(mappedBy = "beer")
-    private Set<Comment> comments;
+    @OneToMany(
+            mappedBy = "beer",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Comment> comments = new ArrayList<>();
+
+
+    public Beer(){    }
 
 
 
@@ -104,18 +120,36 @@ public class Beer {
     }
 
     public int getVotes() {
-        return votes;
+        return comments.size();
     }
 
-    public void setVotes(int votes) {
-        this.votes = votes;
-    }
+//    public void setVotes(int votes) {
+//        this.votes = votes;
+//    }
 
-    public Set<Comment> getComments() {
+    public List<Comment> getComments() {
         return comments;
     }
 
-    public void setComments(Set<Comment> comments) {
+    public void addComment(Comment comment){
+        comments.add(comment);
+        comment.setBeer(this);
+    }
+
+    public void removeComment(Comment comment){
+        comments.remove(comment);
+        comment.setBeer(null);
+    }
+
+    public List<ObjectNode> getPrettyComments(){
+        List<ObjectNode> allComments = new ArrayList<>();
+        for(int i=0; i<comments.size();i++){
+            allComments.add(comments.get(i).getCommentJson());
+        }
+        return allComments;
+    }
+
+    public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
 
@@ -127,12 +161,29 @@ public class Beer {
         this.price = price;
     }
 
+    public ObjectNode getJSONBeer(){
+        final ObjectMapper mapper = new ObjectMapper();
+        ObjectNode jsonBeer = mapper.createObjectNode();
+        try{
+            jsonBeer.put("name", name);
+            jsonBeer.put("stars", stars);
+            jsonBeer.put("alcohol", alcohol);
+            jsonBeer.put("volume", volume);
+            System.out.println(getPrettyComments());
+            jsonBeer.putArray("comments").addAll(getPrettyComments());
 
 
+            return jsonBeer;
+        }catch (Exception e){
+            System.out.println(e);
+            return jsonBeer;
+        }
 
-
-    public Beer() {
     }
+
+
+
+
 
 
 

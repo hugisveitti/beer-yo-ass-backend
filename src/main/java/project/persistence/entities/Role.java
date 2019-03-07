@@ -1,6 +1,7 @@
 package project.persistence.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Role is used in authentication

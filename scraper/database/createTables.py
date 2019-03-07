@@ -15,8 +15,7 @@ def create_tables():
             beer_volume INTEGER,
             beer_taste VARCHAR(255),
             beer_stars FLOAT,
-            beer_price INTEGER,
-            beer_votes INTEGER
+            beer_price INTEGER
         )
         """)
 

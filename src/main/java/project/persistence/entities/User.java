@@ -51,33 +51,21 @@ public class User implements UserDetails {
 
     @ManyToMany
     @JoinTable(
-            name = "favorite_beers",
+            name = "my_beers",
             joinColumns = @JoinColumn(
                     name = "users", referencedColumnName = "user_id"),
             inverseJoinColumns = @JoinColumn(
                     name = "beers", referencedColumnName = "beer_id"))
-    private Set<Beer> favoriteBeers;
+    private List<Beer> myBeers = new ArrayList<>();
 
 
-    @ManyToMany
-    @JoinTable(
-            name = "want_to_try",
-            joinColumns = @JoinColumn(
-                    name = "users", referencedColumnName = "user_id"),
-            inverseJoinColumns = @JoinColumn(
-                    name = "beers", referencedColumnName = "beer_id"))
-    private Set<Beer> wantToTryBeers;
 
-//    @OneToMany
-//    @JoinTable(
-//            name = "user_comments",
-//            joinColumns = @JoinColumn(
-//                    name = "user_id", referencedColumnName = "user_id"),
-//            inverseJoinColumns = @JoinColumn(
-//                    name = "comment_id", referencedColumnName = "comment_id"))
-
-    @OneToMany(mappedBy = "user")
-    private Set<Comment> comments;
+    @OneToMany(
+            mappedBy = "user",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Comment> comments = new ArrayList<>();
 
 
     public User(){}
@@ -139,6 +127,41 @@ public class User implements UserDetails {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void addComment(Comment comment){
+        comments.add(comment);
+        comment.setUser(this);
+    }
+
+    public void removeComment(Comment comment){
+        comments.remove(comment);
+        comment.setUser(null);
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+
+    public List<Beer> getMyBeers() {
+        return myBeers;
+    }
+
+    public void addToMyBeers(Beer beer){
+        myBeers.add(beer);
+    }
+
+    public void removeFromMyBeers(Beer beer){
+        myBeers.remove(beer);
+
+    }
+
+
 
 
     @Override
