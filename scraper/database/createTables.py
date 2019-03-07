@@ -8,7 +8,7 @@ def create_tables():
     commands = (
         """
         CREATE TABLE beers (
-            beer_id SERIAL PRIMARY KEY,
+            beer_id VARCHAR(255) PRIMARY KEY,
             beer_name VARCHAR(255) NOT NULL,
             beer_link VARCHAR(255),
             beer_alcohol FLOAT,
