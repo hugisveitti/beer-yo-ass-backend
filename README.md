@@ -51,7 +51,7 @@ send a get request to
 <br />
 /beers/beerId
 <br />
-beerId (Long) is the id of the beer,
+beerId (String) is the id of the beer,
 <br />
 get a response following information about one beer
 <br />
@@ -89,7 +89,23 @@ comment is what the user writes about the beer,
 stars (float) how many stars out of 5 the user rates the beer. If stars is lower than zero then the stars don't go into the database.
 <br />
 response will be (boolean) true if comment was saved otherwise false.
+<br />
+<br />
 
+### My Beers
+send a post request to 
+<br />
+/addToMyBeers/{username}/{beerId}
+<br />
+To a beer add to my beers
+<br />
+<br />
+Send a get request to 
+<br />
+/myBeers/{username}
+<br />
+To get all my beers.
+ 
 
 #TODO
 possible to update the beers tables with scraper so comments stay with their beers.

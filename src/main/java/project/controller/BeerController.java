@@ -43,7 +43,7 @@ public class BeerController {
 
     @RequestMapping("/beers/{beerId}")
     @ResponseBody
-    public ObjectNode getBeer(@PathVariable Long beerId){
+    public ObjectNode getBeer(@PathVariable String beerId){
         Beer beer = beerService.findById(beerId);
         System.out.println(beer);
         return beer.getJSONBeer();
@@ -51,7 +51,7 @@ public class BeerController {
 
     @RequestMapping(value="/comment/{username}/{beerId}/{title}/{comment}/{stars}")
     @ResponseBody
-    public boolean comment(@PathVariable String username, @PathVariable Long beerId, @PathVariable String title, @PathVariable String comment, @PathVariable float stars){
+    public boolean comment(@PathVariable String username, @PathVariable String beerId, @PathVariable String title, @PathVariable String comment, @PathVariable float stars){
         System.out.println("test");
         User currUser;
         try{
