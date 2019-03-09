@@ -14,7 +14,7 @@ driver.get(url)
 next_button = driver.find_elements_by_class_name("next")
 allBeers = []
 for i in range(20):
-    soup=BeautifulSoup(driver.page_source, 'lxml')
+    soup=BeautifulSoup(driver.page_source, 'html')
     for product in soup.find_all('li', class_="product"):
         title_a = product.find('a', class_="title")
         title = title_a.find_all('span')[0].text
@@ -72,7 +72,7 @@ for i in range(20):
     sleep(0.4)
 
 
-with open('data.json', 'w') as outfile:
+with open('data.json', 'r+') as outfile:
     json.dump(allBeers, outfile,ensure_ascii=False)
 
 

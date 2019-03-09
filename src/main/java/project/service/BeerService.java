@@ -1,6 +1,7 @@
 package project.service;
 
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import project.persistence.entities.Beer;
 
 import java.util.List;
@@ -12,7 +13,7 @@ public interface BeerService {
      * Get all {@link Beer}s
      * @return A list of {@link Beer}s
      */
-    List<Beer> findAll();
+    List<ObjectNode> findAll();
 
 
     /**

@@ -36,8 +36,10 @@ public class BeerController {
         this.commentService = commentService;
     }
 
+
+    //ObjectNode implements JSONObject
     @RequestMapping("/beers")
-    public List<Beer> getBeers(){
+    public List<ObjectNode> getBeers(){
     return beerService.findAll();
     }
 
@@ -46,7 +48,8 @@ public class BeerController {
     public ObjectNode getBeer(@PathVariable String beerId){
         Beer beer = beerService.findById(beerId);
         System.out.println(beer);
-        return beer.getJSONBeer();
+        //maybe move this to the beerserivce.
+        return beer.getJSONBeer(true);
     }
 
     @RequestMapping(value="/comment/{username}/{beerId}/{title}/{comment}/{stars}")

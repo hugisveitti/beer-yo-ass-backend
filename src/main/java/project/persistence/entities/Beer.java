@@ -2,16 +2,9 @@ package project.persistence.entities;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 /**
  * Beeeeeeeeeeeeeeers are what the app is about.
  */
@@ -145,6 +138,7 @@ public class Beer {
     því ef við notum comment beint þá er það með reference í user, sem er með reference í comment
     o.s.frv. endalaust.
      */
+    @Transient
     public List<ObjectNode> getPrettyComments(){
         List<ObjectNode> allComments = new ArrayList<>();
         for(int i=0; i<comments.size();i++){
@@ -168,7 +162,8 @@ public class Beer {
     /*
     Verð að nota þetta ObjectNode þar sem það virkar ekki að senda JSONbeer
      */
-    public ObjectNode getJSONBeer(){
+    @Transient
+    public ObjectNode getJSONBeer(boolean withComments){
         final ObjectMapper mapper = new ObjectMapper();
         ObjectNode jsonBeer = mapper.createObjectNode();
         try{
@@ -181,7 +176,9 @@ public class Beer {
             jsonBeer.put("price", price);
             jsonBeer.put("beerId",beerId);
             System.out.println(getPrettyComments());
-            jsonBeer.putArray("comments").addAll(getPrettyComments());
+            if(withComments) {
+                jsonBeer.putArray("comments").addAll(getPrettyComments());
+            }
             return jsonBeer;
         }catch (Exception e){
             System.out.println(e);

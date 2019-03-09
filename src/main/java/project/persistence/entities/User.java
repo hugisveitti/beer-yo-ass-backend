@@ -54,9 +54,9 @@ public class User implements UserDetails {
     @JoinTable(
             name = "my_beers",
             joinColumns = @JoinColumn(
-                    name = "users", referencedColumnName = "user_id"),
+                    name = "user_id", referencedColumnName = "user_id"),
             inverseJoinColumns = @JoinColumn(
-                    name = "beers", referencedColumnName = "beer_id"))
+                    name = "beer_id", referencedColumnName = "beer_id"))
     private List<Beer> myBeers = new ArrayList<>();
 
 
@@ -153,10 +153,13 @@ public class User implements UserDetails {
         return myBeers;
     }
 
+    //when the user goes to "my page" and wants to see the beers he has saved.
     public List<ObjectNode> getObjectNodeMyBeers(){
         List<ObjectNode> allBeers = new ArrayList<>();
         for(int i=0; i<myBeers.size(); i++){
-            allBeers.add(myBeers.get(i).getJSONBeer());
+
+            //maybe show him comments on his beer, or the only place to see the comments will be on each beers individual page.
+            allBeers.add(myBeers.get(i).getJSONBeer(false));
         }
         return allBeers;
     }
@@ -165,9 +168,12 @@ public class User implements UserDetails {
         myBeers.add(beer);
     }
 
+    public void setMyBeers(List<Beer> myBeers){
+        this.myBeers = myBeers;
+    }
+
     public void removeFromMyBeers(Beer beer){
         myBeers.remove(beer);
-
     }
 
 

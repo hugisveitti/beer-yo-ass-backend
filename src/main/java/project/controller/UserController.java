@@ -60,7 +60,10 @@ public class UserController {
     @RequestMapping(value="/addToMyBeers/{username}/{beerId}")
     @ResponseBody
     public boolean addToMyBeers(@PathVariable String username, @PathVariable String beerId){
-        customUserDetailsService.addToMyBeers(username, beerService.findById(beerId));
+        System.out.println("username " + username);
+        System.out.println("beerId " + beerId);
+
+        customUserDetailsService.addToMyBeers(username, beerId);
         return true;
     }
 

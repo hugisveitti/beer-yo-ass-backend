@@ -11,6 +11,7 @@ import project.persistence.entities.User;
 import project.persistence.repositories.UserRepository;
 
 import org.springframework.security.core.AuthenticationException;
+import project.service.BeerService;
 import project.service.CustomUserDetailsService;
 
 import java.util.*;
@@ -21,13 +22,15 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     private RoleRepository roleRepository;
     private UserRepository repository;
     private PasswordEncoder passwordEncoder;
+    private BeerService beerService;
 
     // Dependency Injection
     @Autowired
-    public CustomUserDetailsServiceImplementation(UserRepository repository, PasswordEncoder passwordEncoder, RoleRepository roleRepository) {
+    public CustomUserDetailsServiceImplementation(UserRepository repository, PasswordEncoder passwordEncoder, RoleRepository roleRepository, BeerService beerService) {
         this.repository = repository;
         this.passwordEncoder = passwordEncoder;
         this.roleRepository = roleRepository;
+        this.beerService = beerService;
     }
 
     @Override
@@ -96,9 +99,17 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     }
 
 
-    public boolean addToMyBeers(String username, Beer beer){
-        User user = repository.findByUsername(username);
-        user.addToMyBeers(beer);
-        return true;
+    public boolean addToMyBeers(String username, String beerId){
+        try{
+            User user = findByUsername(username);
+            System.out.println(beerId);
+            Beer beer = beerService.findById(beerId);
+            user.addToMyBeers(beer);
+            repository.save(user);
+            return true;
+        } catch (Exception e){
+            System.out.println(e);
+            return false;
+        }
     }
 }

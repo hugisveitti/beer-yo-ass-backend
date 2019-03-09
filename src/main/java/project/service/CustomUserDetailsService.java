@@ -56,5 +56,5 @@ public interface CustomUserDetailsService extends UserDetailsService {
     boolean login(String username, String password) throws UsernameNotFoundException;
 
 
-    boolean addToMyBeers(String username, Beer beer);
+    boolean addToMyBeers(String username, String beerId);
 }
