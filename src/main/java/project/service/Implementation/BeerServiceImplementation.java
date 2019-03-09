@@ -22,7 +22,7 @@ public class BeerServiceImplementation implements BeerService {
     }
 
 
-    //viljum ekki skila commentunum her, thannig vid thurfum ad na i bjorana an theirra..
+    //we don't want the comments when fetching all the beers.
     public List<ObjectNode> findAll(){
         List<Beer> allBeers = beerRepository.findAll();
         List<ObjectNode> returnBeers = new ArrayList<>();
@@ -35,6 +35,7 @@ public class BeerServiceImplementation implements BeerService {
     public Beer findByName(String name){
         return beerRepository.findByName(name);
     }
+
 
     public Beer findById(String id){
         return beerRepository.findByBeerId(id);

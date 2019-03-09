@@ -35,10 +35,16 @@ python createTables.py
 python insertData.py
 ```
 
+It is possible to drop all the tables with the command in the same folder
+```$xslt
+python deleteTables.py
+```
+
+
 ## Apinn
 note, this application is not secure, maybe we will implement a secure app later.
 <br />
-Every respone is a String unless other is written.
+
 ### get beers
 send a get request to 
 <br />
@@ -83,7 +89,7 @@ send a post request to
 /comment/{username}/{beerId}/{title}/{comment}/{stars}
 <br />
 username is the user logged in, 
-beerId (Long) is the beer being commented on,
+beerId (String) is the beer being commented on,
 title is the title of the comment,
 comment is what the user writes about the beer,
 stars (float) how many stars out of 5 the user rates the beer. If stars is lower than zero then the stars don't go into the database.
@@ -92,6 +98,23 @@ response will be (boolean) true if comment was saved otherwise false.
 <br />
 <br />
 
+### delete comment
+send a request to 
+<br />
+/deleteComment/{commentId}
+<br />
+To delete comment with id commentId (Long)
+<br />
+<br />
+reponse will be true (need to fix that)
+### update comment
+send a request to 
+<br />
+/updateComment/{commentId}/{title}/{comment}/{stars}
+<br />
+To update comment with id commentId (Long)
+<br />
+reponse will be true (need to fix that)
 ### My Beers
 send a post request to 
 <br />
@@ -99,12 +122,16 @@ send a post request to
 <br />
 To a beer add to my beers
 <br />
+response will be (boolean) true if comment was saved otherwise false.
+<br />
 <br />
 Send a get request to 
 <br />
 /myBeers/{username}
 <br />
-To get all my beers.
+To get all the users beers.
+<br />
+Response will be JSON Array.
  
 
 #TODO

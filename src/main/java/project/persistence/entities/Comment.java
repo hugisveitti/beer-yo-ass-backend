@@ -1,17 +1,19 @@
 package project.persistence.entities;
 
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.json.JSONObject;
-import org.mockito.internal.stubbing.answers.ThrowsException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 
 import javax.persistence.*;
 import java.util.Date;
+
+/**
+ * When a user comments on a beer or leaves a rating (stars).
+ * Should be possible to comment without leaving a rating and
+ * leaving a rating without commenting.
+ */
+
 
 @Entity
 @Table(name = "comments")
@@ -37,6 +39,7 @@ public class Comment {
     @Column(name="comment")
     private String comment;
 
+    //stars are floats out of 5.
     @Column(name="stars")
     private float stars;
 
@@ -117,9 +120,9 @@ public class Comment {
 
 
 
+    //get a JSON of the comment without a user object.
     public ObjectNode getCommentJson(){
         final ObjectMapper mapper = new ObjectMapper();
-//        ObjectNode objectNode = new ObjectNode(JsonNodeFactory);
         ObjectNode json = mapper.createObjectNode();
         try{
             json.put("title", title);

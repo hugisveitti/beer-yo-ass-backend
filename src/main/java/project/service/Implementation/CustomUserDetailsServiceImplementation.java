@@ -99,6 +99,7 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     }
 
 
+
     public boolean addToMyBeers(String username, String beerId){
         try{
             User user = findByUsername(username);

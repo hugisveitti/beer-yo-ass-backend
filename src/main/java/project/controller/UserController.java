@@ -13,23 +13,22 @@ import java.util.List;
 
 /**
  * Controller for most post and get request that have something to do with the user
- * note that WebSecurityConfig handles the login post because of authentication
+ * Note that there is no security.
+ * This controller also handles the request when user adds a beer to his beers and
+ * when getting all of his beers.
  */
 
 @RestController
 public class UserController {
 
     private CustomUserDetailsService customUserDetailsService;
-    private BeerService beerService;
     // Dependency Injection
 
     @Autowired
-    public UserController(CustomUserDetailsService customUserDetailsService, BeerService beerService) {
+    public UserController(CustomUserDetailsService customUserDetailsService) {
         this.customUserDetailsService = customUserDetailsService;
-        this.beerService = beerService;
     }
 
-//    @PostMapping(value = "/login")
     @RequestMapping(value="/login/{username}/{password}")
     @ResponseBody
     public boolean login(@PathVariable String username, @PathVariable String password){

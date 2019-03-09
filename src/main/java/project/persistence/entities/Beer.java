@@ -7,6 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 /**
  * Beeeeeeeeeeeeeeers are what the app is about.
+ *
+ * getPrettyComments is used to get information about the comment
+ * without getting the user but just the username, if we don't do this
+ * we get an endless reference loop (because the user has comments and comments have users).
+ *
+ * getJSONBeer returns a JSON object with or without getPrettyComments Array..
+ *
  */
 
 @Entity(name="Beer")
@@ -33,15 +40,15 @@ public class Beer {
     @Column(name = "beer_volume")
     private int volume;
 
+    //if -1 then it has never been voted on.
     @Column(name = "beer_stars")
     private float stars=-1;
-
-//    @Column(name = "beer_votes")
-//    private int votes=0;
 
     @Column(name = "beer_price")
     private int price;
 
+
+    //a beer can have many comments but one comment can have one beer
     @OneToMany(
             mappedBy = "beer",
             cascade = CascadeType.ALL,
@@ -59,48 +66,12 @@ public class Beer {
         return beerId;
     }
 
-    public void setBeerId(String beerId) {
-        this.beerId = beerId;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getLinkToVinbudin() {
-        return linkToVinbudin;
-    }
-
-    public void setLinkToVinbudin(String linkToVinbudin) {
-        this.linkToVinbudin = linkToVinbudin;
-    }
-
-    public float getAlcohol() {
-        return alcohol;
-    }
-
-    public void setAlcohol(float alcohol) {
-        this.alcohol = alcohol;
-    }
-
-    public String getTaste() {
-        return taste;
-    }
-
-    public void setTaste(String taste) {
-        this.taste = taste;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
     }
 
     public float getStars() {
@@ -111,13 +82,17 @@ public class Beer {
         this.stars = stars;
     }
 
+    //only add to votes if comment stars is not -1
     public int getVotes() {
-        return comments.size();
+        int count = 0;
+        for(int i=0; i<comments.size(); i++){
+            if(comments.get(i).getStars() != -1){
+                count += 1;
+            }
+        }
+        return count;
     }
 
-//    public void setVotes(int votes) {
-//        this.votes = votes;
-//    }
 
     public List<Comment> getComments() {
         return comments;
@@ -147,17 +122,6 @@ public class Beer {
         return allComments;
     }
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
 
     /*
     Verð að nota þetta ObjectNode þar sem það virkar ekki að senda JSONbeer

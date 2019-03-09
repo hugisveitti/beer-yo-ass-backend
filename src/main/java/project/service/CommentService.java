@@ -1,6 +1,5 @@
 package project.service;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import project.persistence.entities.Beer;
 import project.persistence.entities.Comment;
 import project.persistence.entities.User;
@@ -14,4 +13,8 @@ public interface CommentService {
     List<Comment> findByBeer(Beer beer);
 
     Comment save(Comment comment);
+
+    void delete(Long commentId);
+
+    void update(Long commentId, String title, String comment, float stars);
 }

@@ -19,6 +19,13 @@ import javax.persistence.EntityManagerFactory;
 import java.util.List;
 
 
+/**
+ * REST controller.
+ * Handles returning all the beers, specific beers and adding comments to beers.
+ *
+ * TODO change requestmapping to appropriate post og get requests.
+ */
+
 @RestController
 public class BeerController {
 
@@ -59,10 +66,8 @@ public class BeerController {
         User currUser;
         try{
             currUser = customUserDetailsService.findByUsername(username);
-            System.out.println("test");
             Beer currBeer = beerService.findById(beerId);
             Comment newComment = new Comment(currUser, currBeer, title, comment, stars);
-            System.out.println(newComment);
             commentService.save(newComment);
             return true;
         } catch(Exception e){
@@ -71,8 +76,25 @@ public class BeerController {
         }
 
         // todo gera ehv ef saveast ekki.......
-
     }
+
+
+    //not sure how to these return types should be...
+    @RequestMapping(value="/deleteComment/{commentId}")
+    @ResponseBody
+    public boolean deleteComment(@PathVariable Long commentId){
+        commentService.delete(commentId);
+        return true;
+    }
+
+
+    @RequestMapping(value="/updateComment/{commentId}/{title}/{comment}/{stars}")
+    @ResponseBody
+    public boolean updateComment(@PathVariable Long commentId, @PathVariable String title, @PathVariable String comment, @PathVariable float stars){
+        commentService.update(commentId, title, comment, stars);
+        return true;
+    }
+
 
 
 }
