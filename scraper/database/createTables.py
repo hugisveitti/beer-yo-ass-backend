@@ -7,8 +7,11 @@ def create_tables():
 
     commands = (
         """
+        DROP TABLE if exists beers cascade ;
+        """,
+        """
         CREATE TABLE beers (
-            beer_id VARCHAR(255) PRIMARY KEY,
+            beer_id VARCHAR(128) PRIMARY KEY,
             beer_name VARCHAR(255) NOT NULL,
             beer_link VARCHAR(255),
             beer_alcohol FLOAT,
@@ -81,10 +84,10 @@ def create_tables():
         params = config()
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
-        cur.execute(commands)
-        # for command in commands:
-        #     print("ass")
-        #     cur.execute(command)
+        # cur.execute(commands)
+        for command in commands:
+            print("ass")
+            cur.execute(command)
         cur.close()
         conn.commit()
     except (Exception, psycopg2.DatabaseError) as err:

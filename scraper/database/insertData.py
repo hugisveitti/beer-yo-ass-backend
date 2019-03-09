@@ -38,6 +38,7 @@ for beer in beers:
     beer_name = beer['title']
     beer_link = beer['link_to_vinbudin']
     beer_id = beer['product_number']
+    #print(beer_id)
     # prosentu merki
     # print(beer['alcohol'])
     # print(beer['alcohol'][:-1])
