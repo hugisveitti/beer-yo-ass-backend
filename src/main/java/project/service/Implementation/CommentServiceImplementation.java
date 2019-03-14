@@ -115,7 +115,6 @@ public class CommentServiceImplementation implements CommentService {
         beer.setStars(allRating/beer.getVotes());
         beerRepository.save(beer);
 
-
         currComment.setTitle(title);
         currComment.setComment(comment);
         currComment.setStars(stars);
