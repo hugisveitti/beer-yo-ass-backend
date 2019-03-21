@@ -28,11 +28,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 
 
 /**
@@ -61,8 +69,8 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
     public void onApplicationEvent(ContextRefreshedEvent event) {
 
 
-        if (alreadySetup)
-            return;
+//        if (alreadySetup)
+//            return;
         createRoleIfNotFound("ROLE_ADMIN");
         createRoleIfNotFound("ROLE_USER");
 
@@ -102,7 +110,7 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
         System.out.println(filename);
         try {
             JSONArray jsonArray = parseJSONFile(filename);
-            System.out.println(jsonArray);
+//            System.out.println(jsonArray);
             insertBeersIntoDatabase(jsonArray);
         } catch (Exception e){
             System.out.println(e);
@@ -123,45 +131,8 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
 
 
     public static JSONArray parseJSONFile(String filename) throws JSONException, IOException {
-        String content = new String(Files.readAllBytes(Paths.get(filename)), StandardCharsets.UTF_8);
-
-
-        File file = new File(filename);
-        ObjectMapper mapper = new ObjectMapper();
-
-//        JsonNode masterJSON = mapper.readTree(file);
-//        System.out.println(masterJSON);
-        System.out.println("#########");
-        String str;
-    try{
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(
-                        new FileInputStream(file), "UTF8"));
-
-        while ((str = in.readLine()) != null) {
-            System.out.println(str);
-        }
-
-        in.close();
-        return new JSONArray(str);
-    }
-	    catch (UnsupportedEncodingException e)
-    {
-        System.out.println(e.getMessage());
-    }
-	    catch (IOException e)
-    {
-        System.out.println(e.getMessage());
-    }
-	    catch (Exception e)
-    {
-        System.out.println(e.getMessage());
-    }
-
-
-        System.out.println("###################");
+        String content = new String(Files.readAllBytes(Paths.get(filename)), StandardCharsets.ISO_8859_1);
         return new JSONArray(content);
-
     }
 
 
@@ -169,51 +140,60 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
 
         for(int i=0; i<allBeers.length(); i++){
             try{
+
+
+
                 System.out.println(allBeers.get(i));
                 JSONObject object = allBeers.getJSONObject(i);
-                Beer beer = new Beer();
-
-                beer.setName(object.getString("title"));
+                Beer beer = beerService.findById(object.getString("product_number"));
 
                 String volume = object.getString("volume");
-                beer.setVolume((Integer.parseInt(volume.substring(0,volume.length()-3))));
-
                 String alc = object.getString("alcohol");
-                beer.setAlcohol( Float.parseFloat(alc.substring(0, alc.length()-1)));
-
                 String price = object.getString("price");
+
                 price = price.substring(0, price.length()-4);
 
                 //eyda punktinum
                 String newPrice = price;
                 if(price.length() > 4){
+                    newPrice = "";
                     for(int j=0; j<price.length();j++){
-                        if(price.substring(i) != "."){
-                            newPrice += price.substring(i);
+                        if(!price.substring(j,j+1).equals( ".")){
+                            newPrice += price.substring(j,j+1);
                         }
                     }
                 }
 
-                beer.setPrice(Integer.parseInt(newPrice));
-
                 String link = object.getString("link_to_vinbudin");
-                beer.setLinkToVinbudin(link);
-
                 String taste = object.getString("taste");
-                beer.setTaste(taste);
-
                 String productNumber = object.getString("product_number");
-                beer.setBeerId(productNumber);
-
-                System.out.println(newPrice + " " + alc+ " " +  volume);
-                beerService.save(beer);
 
 
-                System.out.println(object.getString("title"));
+
+                if(beer != null){
+                    beer.setPrice(Integer.parseInt(newPrice));
+                    beerService.save(beer);
+                } else {
+                    beer = new Beer();
+                    beer.setName(object.getString("title"));
+
+                    beer.setVolume((Integer.parseInt(volume.substring(0,volume.length()-3))));
+
+                    beer.setAlcohol( Float.parseFloat(alc.substring(0, alc.length()-1)));
+
+
+                    beer.setPrice(Integer.parseInt(newPrice));
+
+                    beer.setLinkToVinbudin(link);
+
+                    beer.setTaste(taste);
+                    beer.setBeerId(productNumber);
+
+                    beerService.save(beer);
+                }
             } catch (Exception e){
                 System.out.println(e);
             }
-
         }
     }
 }

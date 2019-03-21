@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/scraper/data.json" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/project/Config/InitialDataLoader.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/project/Config/data.json" charset="windows-1252" />
   </component>
 </project>

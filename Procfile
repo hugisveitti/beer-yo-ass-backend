@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/Spring_Web_MVC.jar
+web: java -cp target/classes:target/dependency/* com.yammer.ApiService server
