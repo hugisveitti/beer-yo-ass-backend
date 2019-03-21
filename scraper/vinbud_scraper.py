@@ -14,7 +14,7 @@ driver.get(url)
 next_button = driver.find_elements_by_class_name("next")
 allBeers = []
 for i in range(20):
-    soup=BeautifulSoup(driver.page_source, 'html')
+    soup=BeautifulSoup(driver.page_source, 'lxml')
     for product in soup.find_all('li', class_="product"):
         title_a = product.find('a', class_="title")
         title = title_a.find_all('span')[0].text
