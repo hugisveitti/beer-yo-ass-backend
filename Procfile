@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar classes/artifacts/Sprint_Web_MVC_jar/Sprint_Web_MVC.jar
+web: java -Dserver.port=$PORT -jar classes/artifacts/Spring_Web_MVC_jar/Spring_Web_MVC.jar
