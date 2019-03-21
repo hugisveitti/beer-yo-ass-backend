@@ -39,6 +39,11 @@ public class User implements UserDetails {
     private Boolean enabled;
 
 
+    //profile picture is a beer id, so users identify with a beer
+    @Column(name="profile_picture")
+    private String profilePicture;
+
+
 
     @ManyToMany
     @JoinTable(
@@ -67,6 +72,15 @@ public class User implements UserDetails {
             orphanRemoval = true
     )
     private List<Comment> comments = new ArrayList<>();
+
+
+    @OneToMany(
+            mappedBy = "user",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Drinklist> drinklists = new ArrayList<>();
+
 
 
     public User(){}
@@ -129,6 +143,13 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    public String getProfilePicture() {
+        return profilePicture;
+    }
+
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
+    }
 
     public List<Comment> getComments() {
         return comments;
@@ -176,6 +197,22 @@ public class User implements UserDetails {
         myBeers.remove(beer);
     }
 
+
+    public void addDrinklist(Drinklist drinklist){
+        drinklists.add(drinklist);
+        drinklist.setUser(this);
+    }
+
+    //when the user goes to "my page" and wants to see the beers he has saved.
+    public List<ObjectNode> getObjectNodeMyDrinklist(){
+        List<ObjectNode> allDrinklists = new ArrayList<>();
+        for(int i=0; i<drinklists.size(); i++){
+
+            //maybe show him comments on his beer, or the only place to see the comments will be on each beers individual page.
+            allDrinklists.add(drinklists.get(i).getJSONDrinklist());
+        }
+        return allDrinklists;
+    }
 
 
 

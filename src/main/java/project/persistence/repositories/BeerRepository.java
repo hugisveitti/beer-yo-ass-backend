@@ -8,7 +8,7 @@ import project.persistence.entities.Beer;
 import java.util.List;
 
 @Repository
-public interface BeerRepository extends JpaRepository<Beer, Long> {
+public interface BeerRepository extends JpaRepository<Beer, Long> { //breyta i Long?
 
     Beer findByName(String name);
 

@@ -113,4 +113,12 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
             return false;
         }
     }
+
+    @Override
+    public boolean changeProfilePicture(String username, String beerId) {
+        User user = repository.findByUsername(username);
+        user.setProfilePicture(beerId);
+        repository.save(user);
+        return true;
+    }
 }

@@ -73,4 +73,12 @@ public class UserController {
     public List<ObjectNode> myBeers(@PathVariable String username){
         return customUserDetailsService.findByUsername(username).getObjectNodeMyBeers();
     }
+
+    //post request
+    @RequestMapping(value="/changeProfilePicture/{username}/{beerId}")
+    @ResponseBody
+    public boolean changeProfilePicture(@PathVariable String username, @PathVariable String beerId){
+        customUserDetailsService.changeProfilePicture(username, beerId);
+        return true;
+    }
 }
