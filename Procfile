@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* com.yammer.ApiService server
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar
