@@ -7,18 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06072d92-250e-4f4c-aa1b-3376c7d81fbd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/persistence/repositories/BeerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/persistence/repositories/BeerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/Config/InitialDataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/Config/InitialDataLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/persistence/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/persistence/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/CustomUserDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/Implementation/CustomUserDetailsServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/Implementation/CustomUserDetailsServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +40,7 @@
           <entry key="java" value="159" />
           <entry key="json" value="5" />
           <entry key="log" value="1" />
-          <entry key="md" value="7" />
+          <entry key="md" value="8" />
           <entry key="properties" value="4" />
           <entry key="py" value="28" />
           <entry key="xml" value="4" />
@@ -62,7 +52,7 @@
           <entry key="IDEA_MODULE" value="2" />
           <entry key="JAVA" value="159" />
           <entry key="JSON" value="5" />
-          <entry key="Markdown" value="7" />
+          <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="4" />
           <entry key="Python" value="28" />
@@ -73,8 +63,8 @@
         <counts>
           <entry key="dummy" value="40" />
           <entry key="gitignore" value="7" />
-          <entry key="java" value="21874" />
-          <entry key="md" value="2532" />
+          <entry key="java" value="21909" />
+          <entry key="md" value="3224" />
           <entry key="properties" value="4" />
           <entry key="py" value="278" />
           <entry key="xml" value="5" />
@@ -82,8 +72,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="21874" />
-          <entry key="Markdown" value="2532" />
+          <entry key="JAVA" value="21909" />
+          <entry key="Markdown" value="3224" />
           <entry key="PLAIN_TEXT" value="47" />
           <entry key="Properties" value="4" />
           <entry key="Python" value="278" />
@@ -117,10 +107,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/repositories/DrinklistRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/DrinklistServiceImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="170">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,13 +119,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/DrinklistServiceImplementation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="304">
+                <caret line="170" column="153" selection-start-line="170" selection-start-column="153" selection-end-line="170" selection-end-column="153" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -164,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="50" column="36" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="36" />
+            <state relative-caret-position="199">
+              <caret line="59" column="161" selection-start-line="59" selection-start-column="161" selection-end-line="59" selection-end-column="161" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#650#651#0" expanded="true" />
@@ -251,7 +241,6 @@
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/repositories/CommentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/controller/BeerController.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/CommentServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/entities/Beer.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/BeerService.java" />
@@ -266,13 +255,14 @@
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/repositories/DrinklistRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/entities/Drinklist.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/DrinklistService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/DrinklistServiceImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -289,7 +279,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
@@ -431,7 +421,7 @@
     <property name="SearchEverywhereHistoryKey" value="hib&#9;PSI&#9;JAVA://org.hibernate.Hibernate" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553207826433" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553208526792" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -550,12 +540,12 @@
       <workItem from="1553179952741" duration="5141000" />
       <workItem from="1553190429197" duration="508000" />
       <workItem from="1553194516301" duration="1102000" />
-      <workItem from="1553202655511" duration="5156000" />
+      <workItem from="1553202655511" duration="5863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79145000" />
+    <option name="totallyTimeSpent" value="79852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,7 +560,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17986578" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17986578" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -580,7 +570,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32998565" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3531915" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3531915" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -714,16 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="167" column="57" selection-start-line="167" selection-start-column="57" selection-end-line="167" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="132">
-            <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -868,20 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -921,11 +887,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/DrinklistServiceImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
+        <state relative-caret-position="170">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="59" column="161" selection-start-line="59" selection-start-column="161" selection-end-line="59" selection-end-column="161" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="304">
+            <caret line="170" column="153" selection-start-line="170" selection-start-column="153" selection-end-line="170" selection-end-column="153" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

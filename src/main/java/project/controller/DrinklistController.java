@@ -55,7 +55,8 @@ public class DrinklistController {
     }
 
 
-    @RequestMapping("/markBeerOnDrinklist/{username}/{drinklistId},{beerId},{marked}")
+    @RequestMapping("/markBeerOnDrinklist/{username}/{drinklistId}/{beerId}/{marked}")
+    @ResponseBody
     public boolean markBeerOnDrinklist(@PathVariable String username, @PathVariable Long drinklistId, @PathVariable String beerId, @PathVariable boolean marked){
         drinklistService.markBeerOnDrinklist(username,drinklistId,beerId,marked);
         return true;

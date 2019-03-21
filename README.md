@@ -70,19 +70,29 @@ taste (e.g. lager, IPA),
 votes (int) how many times the beer has been voted on,
 (float) stars (out of 5) if never voted on the value will be -1.
 
-### login
+### User
+
+#### login
 send a post request to 
 <br />
 /login/{username}/{password}
 <br />
 if the username and password match the response will be (boolean) true otherwise false.
 <br />
-### signup
+#### signup
 send a post request to 
 <br />
 /signup/{username}/{password}
 <br />
 if the username is not taken, the response is (boolean) true otherwise false.
+
+#### profile picture
+send a post request to 
+<br />
+/changeProfilePicture/{username}/{beerId}
+<br />
+To set user's profile picture to the beerId
+
 ### comment
 send a post request to 
 <br />
@@ -133,6 +143,36 @@ To get all the users beers.
 <br />
 Response will be JSON Array.
  
+### Drinklists
+get request 
+<br />
+/getMyDrinklist/{username}
+<br />
+<br />
+get request to
+<br />
+/getAllPublicDrinklists
+<br />
+<br />
+post request 
+<br />
+/createDrinklist/{username}/{name}/{public}
+<br />
+<br />
+post request to 
+<br />
+/addToDrinklist/{username}/{drinklistId}/{beerId}
+<br />
+<br />
+post request
+<br />
+/markBeerOnDrinklist/{username}/{drinklistId}/{beerId}/{marked}
+<br />
+where {marked} is a boolean weather the beer should be marked or not, could be a problem in the future if many of the same beer are in the same drinklist
+<br />
+<br />
+
+
 
 #TODO
 possible to update the beers tables with scraper so comments stay with their beers.
