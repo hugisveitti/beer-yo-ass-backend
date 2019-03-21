@@ -82,6 +82,54 @@ public class Beer {
         this.stars = stars;
     }
 
+    public void setBeerId(String beerId) {
+        this.beerId = beerId;
+    }
+
+    public String getLinkToVinbudin() {
+        return linkToVinbudin;
+    }
+
+    public void setLinkToVinbudin(String linkToVinbudin) {
+        this.linkToVinbudin = linkToVinbudin;
+    }
+
+    public float getAlcohol() {
+        return alcohol;
+    }
+
+    public void setAlcohol(float alcohol) {
+        this.alcohol = alcohol;
+    }
+
+    public String getTaste() {
+        return taste;
+    }
+
+    public void setTaste(String taste) {
+        this.taste = taste;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
     //only add to votes if comment stars is not -1
     public int getVotes() {
         int count = 0;

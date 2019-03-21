@@ -17,4 +17,6 @@ public interface BeerRepository extends JpaRepository<Beer, Long> {
 //    Beer findBy
 
     List<Beer> findAll();
+
+    Beer save(Beer beer);
 }

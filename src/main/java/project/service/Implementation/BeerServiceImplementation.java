@@ -40,4 +40,9 @@ public class BeerServiceImplementation implements BeerService {
     public Beer findById(String id){
         return beerRepository.findByBeerId(id);
     }
+
+
+    public Beer save(Beer beer){
+        return beerRepository.save(beer);
+    }
 }

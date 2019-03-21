@@ -29,6 +29,6 @@ public interface BeerService {
      */
     Beer findById(String id);
 
-
+    Beer save(Beer beer);
 
 }
