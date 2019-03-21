@@ -20,4 +20,6 @@ public interface DrinklistService {
 
     List<ObjectNode> getMyDrinklists(String username);
 
+    void deleteDrinklist(String username, Long drinklistId);
+
 }

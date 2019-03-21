@@ -61,4 +61,12 @@ public class DrinklistController {
         drinklistService.markBeerOnDrinklist(username,drinklistId,beerId,marked);
         return true;
     }
+
+
+    @RequestMapping("/deleteDrinklist/{username}/{drinklistId}")
+    @ResponseBody
+    public boolean deleteDrinklist(@PathVariable String username, @PathVariable Long drinklistId){
+        drinklistService.deleteDrinklist(username, drinklistId);
+        return true;
+    }
 }

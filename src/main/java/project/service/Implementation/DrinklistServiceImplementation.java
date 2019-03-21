@@ -101,4 +101,13 @@ public class DrinklistServiceImplementation implements DrinklistService {
         User user = userRepository.findByUsername(username);
         return user.getObjectNodeMyDrinklist();
     }
+
+    @Override
+    public void deleteDrinklist(String username, Long drinklistId) {
+        Drinklist drinklist = drinklistRepository.findByDrinklistId(drinklistId);
+        User user = userRepository.findByUsername(username);
+        user.removeDrinklist(drinklist);
+        drinklistRepository.delete(drinklist);
+
+    }
 }

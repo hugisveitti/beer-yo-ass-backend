@@ -203,6 +203,10 @@ public class User implements UserDetails {
         drinklist.setUser(this);
     }
 
+    public void removeDrinklist(Drinklist drinklist){
+        drinklists.remove(drinklist);
+    }
+
     //when the user goes to "my page" and wants to see the beers he has saved.
     public List<ObjectNode> getObjectNodeMyDrinklist(){
         List<ObjectNode> allDrinklists = new ArrayList<>();

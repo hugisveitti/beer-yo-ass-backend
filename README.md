@@ -146,7 +146,7 @@ Response will be JSON Array.
 ### Drinklists
 get request 
 <br />
-/getMyDrinklist/{username}
+/getMyDrinklists/{username}
 <br />
 <br />
 get request to
