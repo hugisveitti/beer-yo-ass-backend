@@ -1,5 +1,7 @@
 # beer-yo-ass-backend
 
+Server is live: https://beer-yo-ass-backend.herokuapp.com/
+
 ## How do I get this ?
 Your IDE ([IntelliJ](https://www.jetbrains.com/idea/), [Eclipse](https://eclipse.org/), [Spring Tool Suit](https://spring.io/tools)) should be able to clone a project from Github.
 It should be easy to find information regarding how to do that for your chosen IDE.
@@ -171,6 +173,11 @@ post request
 where {marked} is a boolean weather the beer should be marked or not, could be a problem in the future if many of the same beer are in the same drinklist
 <br />
 <br />
+post request to
+<br />
+/deleteDrinklist/{username}/{drinklistId}
+<br />
+<br/>
 
 
 
