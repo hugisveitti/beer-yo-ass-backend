@@ -59,6 +59,12 @@ public class Comment {
         this.stars = stars;
     }
 
+    public Comment(User user, Beer beer, float stars){
+        this.user = user;
+        this.beer = beer;
+        this.stars = stars;
+    }
+
     public Long getCommentId() {
         return commentId;
     }

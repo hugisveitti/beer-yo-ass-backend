@@ -110,7 +110,7 @@ response will be (boolean) true if comment was saved otherwise false.
 <br />
 <br />
 
-### delete comment
+#### delete comment
 send a request to 
 <br />
 /deleteComment/{commentId}
@@ -118,15 +118,22 @@ send a request to
 To delete comment with id commentId (Long)
 <br />
 <br />
-reponse will be true (need to fix that)
-### update comment
+response will be true (need to fix that)
+#### update comment
 send a request to 
 <br />
 /updateComment/{commentId}/{title}/{comment}/{stars}
 <br />
 To update comment with id commentId (Long)
 <br />
-reponse will be true (need to fix that)
+response will be true (need to fix that)
+
+#### rate
+send a request to 
+<br />
+/rate/{username}/{beerId}/{stars}
+
+
 ### My Beers
 send a post request to 
 <br />
