@@ -47,6 +47,9 @@ public class Beer {
     @Column(name = "beer_price")
     private int price;
 
+    @Column(name = "beer_books_rating")
+    private float booksRating;
+
 
     //a beer can have many comments but one comment can have one beer
     @OneToMany(
@@ -57,7 +60,9 @@ public class Beer {
     private List<Comment> comments = new ArrayList<>();
 
 
-    public Beer(){    }
+    public Beer(){
+        this.calcBooks();
+    }
 
 
 
@@ -123,11 +128,24 @@ public class Beer {
     }
 
     public void setPrice(int price) {
+        calcBooks();
         this.price = price;
     }
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+
+    // calculate the books rating
+    public void calcBooks(){
+        float x = (float) Math.max(1, Math.abs((double)(price - 330)));
+        System.out.println("X " + x);
+        double y = Math.log(x);
+        System.out.println("y " + y);
+        System.out.println("votes " +getVotes());
+        booksRating = ((volume * alcohol)/price) - ((float) (Math.max(0, y))) + ((float) ( Math.abs( stars - 3.0) * Math.log(1 + getVotes())));
+        System.out.println("books rating " + booksRating);
     }
 
     //only add to votes if comment stars is not -1
@@ -176,6 +194,7 @@ public class Beer {
      */
     @Transient
     public ObjectNode getJSONBeer(boolean withComments){
+        calcBooks();
         final ObjectMapper mapper = new ObjectMapper();
         ObjectNode jsonBeer = mapper.createObjectNode();
         try{
@@ -187,6 +206,7 @@ public class Beer {
             jsonBeer.put("taste", taste);
             jsonBeer.put("price", price);
             jsonBeer.put("beerId",beerId);
+            jsonBeer.put("booksRating", booksRating);
             System.out.println(getPrettyComments());
             if(withComments) {
                 jsonBeer.putArray("comments").addAll(getPrettyComments());

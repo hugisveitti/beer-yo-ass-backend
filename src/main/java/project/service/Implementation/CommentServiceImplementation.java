@@ -113,6 +113,7 @@ public class CommentServiceImplementation implements CommentService {
         allRating = allRating - oldStars + stars;
 
         beer.setStars(allRating/beer.getVotes());
+
         beerRepository.save(beer);
 
         currComment.setTitle(title);
