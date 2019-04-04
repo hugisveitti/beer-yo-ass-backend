@@ -180,7 +180,7 @@ public class User implements UserDetails {
         for(int i=0; i<myBeers.size(); i++){
 
             //maybe show him comments on his beer, or the only place to see the comments will be on each beers individual page.
-            allBeers.add(myBeers.get(i).getJSONBeer(false));
+            allBeers.add(myBeers.get(i).getJSONBeer(true));
         }
         return allBeers;
     }

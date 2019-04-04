@@ -29,14 +29,16 @@ public class UserController {
         this.customUserDetailsService = customUserDetailsService;
     }
 
-    @RequestMapping(value="/login/{username}/{password}")
+    @PostMapping(value="/login/{username}/{password}")
     @ResponseBody
     public boolean login(@PathVariable String username, @PathVariable String password){
         System.out.println(username + " " + password);
-
+        System.out.println("yoooooooooooo");
         //ekki secure!!!
         return customUserDetailsService.login(username, password);
+
     }
+
 
 
     @RequestMapping(value="/signup/{username}/{password}")
@@ -63,6 +65,12 @@ public class UserController {
         System.out.println("beerId " + beerId);
 
         customUserDetailsService.addToMyBeers(username, beerId);
+        return true;
+    }
+
+    @RequestMapping(value="/removeFromMyBeers/{username}/{beerId}")
+    public boolean removeFromMyBeers(@PathVariable String username, @PathVariable String beerId){
+        customUserDetailsService.removeFromMyBeers(username, beerId);
         return true;
     }
 

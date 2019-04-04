@@ -233,3 +233,26 @@ file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 
 [Child 15
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1554389887898	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Hugi\\AppData\\Local\\Temp\\rust_mozprofile.pJTDNWJNgP3x"
+1554389888511	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554389888511	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554389888511	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1554389889947	Marionette	INFO	Listening on port 61343
+1554389890014	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+1554389911699	Marionette	INFO	Stopped listening on port 61343
+[Child 2216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 2216, Chrome[Parent 12168, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 17220, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 17220, Chrome_ChildTh[Parent 12168, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 14204, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 14204, C[GPU 34
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

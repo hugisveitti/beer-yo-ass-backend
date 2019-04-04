@@ -151,6 +151,11 @@ Send a get request to
 To get all the users beers.
 <br />
 Response will be JSON Array.
+<br />
+<br />
+Send a post request to
+<br />
+/removeFromMyBeers/{username}/{beerId}
  
 ### Drinklists
 get request 

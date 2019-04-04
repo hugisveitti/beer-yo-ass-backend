@@ -115,6 +115,21 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
     }
 
     @Override
+    public boolean removeFromMyBeers(String username, String beerId) {
+        try{
+            User user = findByUsername(username);
+            Beer beer = beerService.findById(beerId);
+            user.removeFromMyBeers(beer);
+            repository.save(user);
+            return true;
+        }catch (Exception e){
+            System.out.println(e);
+            return false;
+        }
+    }
+
+
+    @Override
     public boolean changeProfilePicture(String username, String beerId) {
         User user = repository.findByUsername(username);
         user.setProfilePicture(beerId);

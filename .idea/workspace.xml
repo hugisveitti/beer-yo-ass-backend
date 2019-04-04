@@ -7,9 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06072d92-250e-4f4c-aa1b-3376c7d81fbd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/controller/BeerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/controller/BeerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/persistence/entities/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/persistence/entities/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/persistence/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/persistence/entities/User.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,15 +27,15 @@
     <session id="-1111384252">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="3" />
-          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -38,10 +43,10 @@
           <entry key="class" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="166" />
+          <entry key="java" value="174" />
           <entry key="json" value="5" />
           <entry key="log" value="1" />
-          <entry key="md" value="8" />
+          <entry key="md" value="9" />
           <entry key="properties" value="4" />
           <entry key="py" value="28" />
           <entry key="xml" value="4" />
@@ -51,9 +56,9 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="166" />
+          <entry key="JAVA" value="174" />
           <entry key="JSON" value="5" />
-          <entry key="Markdown" value="8" />
+          <entry key="Markdown" value="9" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="4" />
           <entry key="Python" value="28" />
@@ -64,8 +69,8 @@
         <counts>
           <entry key="dummy" value="40" />
           <entry key="gitignore" value="7" />
-          <entry key="java" value="22400" />
-          <entry key="md" value="3356" />
+          <entry key="java" value="23028" />
+          <entry key="md" value="3444" />
           <entry key="properties" value="4" />
           <entry key="py" value="278" />
           <entry key="xml" value="5" />
@@ -73,8 +78,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="22400" />
-          <entry key="Markdown" value="3356" />
+          <entry key="JAVA" value="23028" />
+          <entry key="Markdown" value="3444" />
           <entry key="PLAIN_TEXT" value="47" />
           <entry key="Properties" value="4" />
           <entry key="Python" value="278" />
@@ -88,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/CommentServiceImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
+            <state relative-caret-position="-10">
               <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
             </state>
           </provider>
@@ -98,8 +103,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="101">
-                <caret line="128" column="3" selection-start-line="128" selection-start-column="3" selection-end-line="128" selection-end-column="3" />
+              <first_editor relative-caret-position="263">
+                <caret line="156" column="6" selection-start-line="156" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -109,8 +114,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/BeerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="81" column="27" lean-forward="true" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="60" />
+            <state relative-caret-position="446">
+              <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/service/CommentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="18" column="73" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="119" column="43" lean-forward="true" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -118,53 +159,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/Comment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="-27">
+              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/repositories/DrinklistRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/Config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/service/DrinklistService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="67" column="79" selection-start-line="67" selection-start-column="79" selection-end-line="67" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="149">
+              <caret line="53" column="8" selection-start-line="46" selection-end-line="53" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -172,47 +177,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2397">
-              <caret line="206" column="37" selection-start-line="206" selection-start-column="37" selection-end-line="206" selection-end-column="37" />
+            <state relative-caret-position="120">
+              <caret line="183" column="9" lean-forward="true" selection-start-line="183" selection-start-column="9" selection-end-line="183" selection-end-column="9" />
               <folding>
                 <element signature="e#5175#5176#0" expanded="true" />
                 <element signature="e#5219#5220#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/Beer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="181" column="39" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1852#1853#0" expanded="true" />
-                <element signature="e#1888#1889#0" expanded="true" />
-                <element signature="e#1929#1930#0" expanded="true" />
-                <element signature="e#1966#1967#0" expanded="true" />
-                <element signature="e#2026#2027#0" expanded="true" />
-                <element signature="e#2078#2079#0" expanded="true" />
-                <element signature="e#2111#2112#0" expanded="true" />
-                <element signature="e#2141#2142#0" expanded="true" />
-                <element signature="e#2186#2187#0" expanded="true" />
-                <element signature="e#2224#2225#0" expanded="true" />
-                <element signature="e#2256#2257#0" expanded="true" />
-                <element signature="e#2284#2285#0" expanded="true" />
-                <element signature="e#2326#2327#0" expanded="true" />
-                <element signature="e#2360#2361#0" expanded="true" />
-                <element signature="e#2390#2391#0" expanded="true" />
-                <element signature="e#2419#2420#0" expanded="true" />
-                <element signature="e#2460#2461#0" expanded="true" />
-                <element signature="e#2496#2497#0" expanded="true" />
-                <element signature="e#2525#2526#0" expanded="true" />
-                <element signature="e#2553#2554#0" expanded="true" />
-                <element signature="e#2592#2593#0" expanded="true" />
-                <element signature="e#2626#2627#0" expanded="true" />
-                <element signature="e#2681#2682#0" expanded="true" />
-                <element signature="e#2721#2722#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,7 +209,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/project/Config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/entities/Role.java" />
         <option value="$PROJECT_DIR$/scraper/data.json" />
         <option value="$PROJECT_DIR$/scraper/database/insertData.py" />
@@ -261,16 +229,17 @@
         <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/Drinklist.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/repositories/DrinklistRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/entities/Drinklist.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/DrinklistService.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/controller/DrinklistController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/DrinklistServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/controller/BeerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/entities/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/Config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -288,9 +257,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -301,6 +270,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -333,6 +303,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spring_Web_MVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="beer-yo-ass-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Spring_Web_MVC" type="b2602c69:ProjectViewProjectNode" />
@@ -408,7 +387,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,7 +397,7 @@
     <property name="SearchEverywhereHistoryKey" value="hib&#9;PSI&#9;JAVA://org.hibernate.Hibernate" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553209513571" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554389792955" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -539,12 +517,13 @@
       <workItem from="1553190429197" duration="508000" />
       <workItem from="1553194516301" duration="1102000" />
       <workItem from="1553202655511" duration="6925000" />
-      <workItem from="1553778220238" duration="444000" />
+      <workItem from="1553778220238" duration="1146000" />
+      <workItem from="1554382641284" duration="5066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81358000" />
+    <option name="totallyTimeSpent" value="87126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -559,7 +538,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1852349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15704697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -613,13 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/Config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="60" column="30" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="60" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -699,13 +671,6 @@
     <entry file="file://$PROJECT_DIR$/scraper/data.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/Config/InitialDataLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="167" column="57" selection-start-line="167" selection-start-column="57" selection-end-line="167" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/service/BeerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -741,20 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="77" column="68" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/Drinklist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -769,27 +720,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/CommentServiceImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -830,34 +760,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/BeerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="81" column="27" lean-forward="true" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="206" column="37" selection-start-line="206" selection-start-column="37" selection-end-line="206" selection-end-column="37" />
-          <folding>
-            <element signature="e#5175#5176#0" expanded="true" />
-            <element signature="e#5219#5220#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/Beer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
+        <state relative-caret-position="2397">
           <caret line="181" column="39" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -889,11 +794,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/Config/InitialDataLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="167" column="57" selection-start-line="167" selection-start-column="57" selection-end-line="167" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="183" column="9" lean-forward="true" selection-start-line="183" selection-start-column="9" selection-end-line="183" selection-end-column="9" />
+          <folding>
+            <element signature="e#5175#5176#0" expanded="true" />
+            <element signature="e#5219#5220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/Config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="53" column="8" selection-start-line="46" selection-end-line="53" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/BeerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="119" column="43" lean-forward="true" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="73" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/service/Implementation/CommentServiceImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="101">
-            <caret line="128" column="3" selection-start-line="128" selection-start-column="3" selection-end-line="128" selection-end-column="3" />
+          <first_editor relative-caret-position="263">
+            <caret line="156" column="6" selection-start-line="156" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>

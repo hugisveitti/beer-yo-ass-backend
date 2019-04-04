@@ -58,5 +58,7 @@ public interface CustomUserDetailsService extends UserDetailsService {
 
     boolean addToMyBeers(String username, String beerId);
 
+    boolean removeFromMyBeers(String username, String beerId);
+
     boolean changeProfilePicture(String username, String beerId);
 }
