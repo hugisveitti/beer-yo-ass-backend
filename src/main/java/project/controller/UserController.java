@@ -29,7 +29,7 @@ public class UserController {
         this.customUserDetailsService = customUserDetailsService;
     }
 
-    @PostMapping(value="/login/{username}/{password}")
+    @RequestMapping(value="/login/{username}/{password}")
     @ResponseBody
     public boolean login(@PathVariable String username, @PathVariable String password){
         System.out.println(username + " " + password);
