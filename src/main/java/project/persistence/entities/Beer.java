@@ -143,7 +143,7 @@ public class Beer {
         float x = (float) Math.max(1, Math.abs((double)(volume - 330)));
         System.out.println("X " + x);
 
-        double y = Math.log(x);
+        double y = Math.log10(x);
         System.out.println("y " + y);
         System.out.println("votes " +getVotes());
         booksRating = ((volume * alcohol)/price) - ((float) (Math.max(0, y))) + ((float) ( Math.abs( stars - 3.0) * Math.log(1 + getVotes())));

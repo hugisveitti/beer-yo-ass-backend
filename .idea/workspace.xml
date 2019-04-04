@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06072d92-250e-4f4c-aa1b-3376c7d81fbd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/persistence/entities/Beer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/persistence/entities/Beer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,7 +63,7 @@
         <counts>
           <entry key="dummy" value="40" />
           <entry key="gitignore" value="7" />
-          <entry key="java" value="23726" />
+          <entry key="java" value="23728" />
           <entry key="md" value="3444" />
           <entry key="properties" value="4" />
           <entry key="py" value="278" />
@@ -71,7 +72,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="23726" />
+          <entry key="JAVA" value="23728" />
           <entry key="Markdown" value="3444" />
           <entry key="PLAIN_TEXT" value="47" />
           <entry key="Properties" value="4" />
@@ -153,7 +154,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/Beer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="145" column="30" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+              <caret line="145" column="29" selection-start-line="145" selection-start-column="29" selection-end-line="145" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1546#1547#0" expanded="true" />
@@ -418,7 +419,7 @@
     <property name="SearchEverywhereHistoryKey" value="hib&#9;PSI&#9;JAVA://org.hibernate.Hibernate" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554395035080" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554395259647" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -539,12 +540,12 @@
       <workItem from="1553194516301" duration="1102000" />
       <workItem from="1553202655511" duration="6925000" />
       <workItem from="1553778220238" duration="1146000" />
-      <workItem from="1554382641284" duration="9794000" />
+      <workItem from="1554382641284" duration="10343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91854000" />
+    <option name="totallyTimeSpent" value="92403000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -569,13 +570,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32998565" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34751773" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34751773" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3295129" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32624114" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3295129" />
@@ -864,7 +865,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/project/persistence/entities/Beer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="145" column="30" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+          <caret line="145" column="29" selection-start-line="145" selection-start-column="29" selection-end-line="145" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1546#1547#0" expanded="true" />
