@@ -139,8 +139,10 @@ public class Beer {
 
     // calculate the books rating
     public void calcBooks(){
-        float x = (float) Math.max(1, Math.abs((double)(price - 330)));
+
+        float x = (float) Math.max(1, Math.abs((double)(volume - 330)));
         System.out.println("X " + x);
+
         double y = Math.log(x);
         System.out.println("y " + y);
         System.out.println("votes " +getVotes());
