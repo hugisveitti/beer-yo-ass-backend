@@ -1,5 +1,6 @@
 package project.service.Implementation;
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -135,5 +136,32 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
         user.setProfilePicture(beerId);
         repository.save(user);
         return true;
+    }
+
+    @Override
+    public boolean newGameScore(String username, int score) {
+
+        try{
+            User user = repository.findByUsername(username);
+            user.setGameScore(score);
+            repository.save(user);
+            return true;
+        } catch(Exception e){
+            System.out.println(e);
+            return false;
+        }
+    }
+
+
+
+    // use ObjectNode to store gameScore, and username, dont know how to query and get objectNode
+    @Override
+    public List<ObjectNode> getAllGameScores() {
+        List<ObjectNode> jsonArr = new ArrayList<>();
+        List<User> allUsers = findAll();
+        for(int i=0; i<allUsers.size(); i++){
+            jsonArr.add(allUsers.get(i).getJsonScore());
+        }
+        return jsonArr;
     }
 }

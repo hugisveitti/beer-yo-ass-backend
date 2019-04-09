@@ -1,5 +1,6 @@
 package project.service;
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import project.persistence.entities.Beer;
@@ -61,4 +62,9 @@ public interface CustomUserDetailsService extends UserDetailsService {
     boolean removeFromMyBeers(String username, String beerId);
 
     boolean changeProfilePicture(String username, String beerId);
+
+
+    boolean newGameScore(String username, int score);
+
+    List<ObjectNode> getAllGameScores();
 }

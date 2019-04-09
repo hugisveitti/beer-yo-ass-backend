@@ -107,7 +107,7 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
 
         String dir = System.getProperty("user.dir");
         String filename = dir + "/scraper/data.json";
-        System.out.println(filename);
+//        System.out.println(filename);
         try {
             JSONArray jsonArray = parseJSONFile(filename);
 //            System.out.println(jsonArray);
@@ -140,10 +140,7 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
 
         for(int i=0; i<allBeers.length(); i++){
             try{
-
-
-
-                System.out.println(allBeers.get(i));
+//                System.out.println(allBeers.get(i));
                 JSONObject object = allBeers.getJSONObject(i);
                 Beer beer = beerService.findById(object.getString("product_number"));
 

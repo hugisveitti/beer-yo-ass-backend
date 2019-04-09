@@ -70,7 +70,7 @@ public class CommentServiceImplementation implements CommentService {
 
     //delete star from beer
     public void delete(Long commentId){
-        System.out.println(commentId);
+//        System.out.println(commentId);
         Comment currComment = commentRepository.findByCommentId(commentId);
         Beer beer = currComment.getBeer();
         float allRating = beer.getStars()*beer.getVotes();
@@ -81,9 +81,9 @@ public class CommentServiceImplementation implements CommentService {
             allRating = allRating - commStars;
 
             beer.removeComment(currComment);
-            System.out.println("beer votes " + beer.getVotes());
+//            System.out.println("beer votes " + beer.getVotes());
             if (beer.getVotes() != 0) {
-                System.out.println("has votes");
+//                System.out.println("has votes");
                 beer.setStars(allRating / beer.getVotes());
             } else {
                 beer.setStars(-1);

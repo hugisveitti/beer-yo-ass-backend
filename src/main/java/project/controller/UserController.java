@@ -89,4 +89,20 @@ public class UserController {
         customUserDetailsService.changeProfilePicture(username, beerId);
         return true;
     }
+
+
+    @RequestMapping(value="/newGameScore/{username}/{score}")
+    @ResponseBody
+    public boolean newGameScore(@PathVariable String username, @PathVariable int score){
+
+
+        customUserDetailsService.newGameScore(username, score);
+        return true;
+    }
+
+    @RequestMapping(value="/getAllGameScores")
+    @ResponseBody
+    public List<ObjectNode> getAllGameScores(){
+        return customUserDetailsService.getAllGameScores();
+    }
 }

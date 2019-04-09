@@ -1,5 +1,6 @@
 package project.persistence.entities;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.GrantedAuthority;
@@ -42,6 +43,9 @@ public class User implements UserDetails {
     //profile picture is a beer id, so users identify with a beer
     @Column(name="profile_picture")
     private String profilePicture;
+
+    @Column(name="game_score")
+    private int gameScore = -1;
 
 
 
@@ -225,7 +229,23 @@ public class User implements UserDetails {
         return "User " + this.username + " has id " + this.id + " and password " + this.password;
     }
 
+    public int getGameScore() {
+        return gameScore;
+    }
 
+    public void setGameScore(int _gameScore) {
+        if(_gameScore < this.gameScore || this.gameScore == -1){
+            this.gameScore = _gameScore;
+        }
+    }
+
+    public ObjectNode getJsonScore(){
+        final ObjectMapper mapper = new ObjectMapper();
+        ObjectNode jsonScore = mapper.createObjectNode();
+        jsonScore.put("username", username);
+        jsonScore.put("score", gameScore);
+        return jsonScore;
+    }
 
     //ATH BUA TIL VARIABLES FYRIR THESSI METHODS TIL AD SKILA
     //TODO LAGA THESSA BOLEAN DAEMI
