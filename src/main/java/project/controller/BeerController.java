@@ -81,7 +81,7 @@ public class BeerController {
 
     @RequestMapping(value="/rate/{username}/{beerId}/{stars}")
     @ResponseBody
-    public List<ObjectNode> rate(@PathVariable String username, @PathVariable String beerId,  @PathVariable float stars){
+    public boolean rate(@PathVariable String username, @PathVariable String beerId,  @PathVariable float stars){
         System.out.println("test");
         User currUser;
         try{
@@ -89,10 +89,10 @@ public class BeerController {
             Beer currBeer = beerService.findById(beerId);
             Comment newComment = new Comment(currUser, currBeer, stars);
             commentService.save(newComment);
-            return beerService.findAll();
+            return true;
         } catch(Exception e){
             System.out.println(e);
-            return beerService.findAll();
+            return false;
         }
 
         // todo gera ehv ef saveast ekki.......
