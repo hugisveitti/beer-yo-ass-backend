@@ -8,23 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06072d92-250e-4f4c-aa1b-3376c7d81fbd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/Config/InitialDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/Config/InitialDataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/persistence/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/persistence/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/persistence/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CommentServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CommentServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/controller/BeerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/controller/BeerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/persistence/entities/Beer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/persistence/entities/Beer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/persistence/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/persistence/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/persistence/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/persistence/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/CustomUserDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/Implementation/CustomUserDetailsServiceImplementation$UserExsitsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/Implementation/CustomUserDetailsServiceImplementation$UserExsitsException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/Implementation/CustomUserDetailsServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/Implementation/CustomUserDetailsServiceImplementation.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -431,7 +415,7 @@
     <property name="SearchEverywhereHistoryKey" value="hib&#9;PSI&#9;JAVA://org.hibernate.Hibernate" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554813557673" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554813645520" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -553,12 +537,12 @@
       <workItem from="1553202655511" duration="6925000" />
       <workItem from="1553778220238" duration="1146000" />
       <workItem from="1554382641284" duration="11422000" />
-      <workItem from="1554811318221" duration="2233000" />
+      <workItem from="1554811318221" duration="2357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95715000" />
+    <option name="totallyTimeSpent" value="95839000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,7 +557,7 @@
     <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32871014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32871014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -583,13 +567,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32998565" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41463414" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41463414" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3248227" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32855093" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3328551" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3328551" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32568148" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3295129" />
