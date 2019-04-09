@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06072d92-250e-4f4c-aa1b-3376c7d81fbd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/persistence/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/persistence/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +63,7 @@
           <entry key="dummy" value="40" />
           <entry key="gitignore" value="7" />
           <entry key="java" value="25339" />
-          <entry key="md" value="3750" />
+          <entry key="md" value="3827" />
           <entry key="properties" value="4" />
           <entry key="py" value="278" />
           <entry key="xml" value="5" />
@@ -75,7 +72,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="25339" />
-          <entry key="Markdown" value="3750" />
+          <entry key="Markdown" value="3827" />
           <entry key="PLAIN_TEXT" value="47" />
           <entry key="Properties" value="4" />
           <entry key="Python" value="278" />
@@ -86,12 +83,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-2">
-                <caret line="174" column="72" selection-start-line="174" selection-start-column="72" selection-end-line="174" selection-end-column="72" />
+              <first_editor relative-caret-position="316">
+                <caret line="212" column="28" selection-start-line="212" selection-start-column="28" selection-end-line="212" selection-end-column="28" />
               </first_editor>
               <second_editor />
             </state>
@@ -134,10 +131,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="216">
               <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
             </state>
           </provider>
@@ -230,12 +227,12 @@
         <option value="$PROJECT_DIR$/src/main/java/project/Config/InitialDataLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/CommentServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/project/controller/BeerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/persistence/repositories/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/Implementation/CustomUserDetailsServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/service/CustomUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -252,7 +249,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="1128" />
     <option name="height" value="1038" />
@@ -397,7 +394,7 @@
     <property name="SearchEverywhereHistoryKey" value="hib&#9;PSI&#9;JAVA://org.hibernate.Hibernate" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554821690687" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554821775442" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -519,12 +516,12 @@
       <workItem from="1553202655511" duration="6925000" />
       <workItem from="1553778220238" duration="1146000" />
       <workItem from="1554382641284" duration="11422000" />
-      <workItem from="1554811318221" duration="6078000" />
+      <workItem from="1554811318221" duration="6167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99560000" />
+    <option name="totallyTimeSpent" value="99649000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -549,13 +546,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32998565" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41319942" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41319942" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3248227" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32855093" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3328551" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3328551" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32568148" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3295129" />
@@ -777,16 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-2">
-            <caret line="174" column="72" selection-start-line="174" selection-start-column="72" selection-end-line="174" selection-end-column="72" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/Config/InitialDataLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2210">
@@ -845,8 +832,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="216">
           <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="316">
+            <caret line="212" column="28" selection-start-line="212" selection-start-column="28" selection-end-line="212" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

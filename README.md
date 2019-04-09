@@ -206,8 +206,11 @@ get request to
 /getAllGameScores
 <br />
 To get all game scores
-
-
+<br />
+<br />
+get request to 
+<br />
+/getUserGameScore/{username}
 
 #TODO
 possible to update the beers tables with scraper so comments stay with their beers.
