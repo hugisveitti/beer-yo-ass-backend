@@ -32,8 +32,8 @@ public class UserController {
     @RequestMapping(value="/login/{username}/{password}")
     @ResponseBody
     public boolean login(@PathVariable String username, @PathVariable String password){
-        System.out.println(username + " " + password);
-        System.out.println("yoooooooooooo");
+//        System.out.println(username + " " + password);
+//        System.out.println("yoooooooooooo");
         //ekki secure!!!
         return customUserDetailsService.login(username, password);
 
@@ -44,7 +44,7 @@ public class UserController {
     @RequestMapping(value="/signup/{username}/{password}")
     @ResponseBody
     public boolean signup(@PathVariable String username, @PathVariable String password){
-        System.out.println(username + " " + password);
+//        System.out.println(username + " " + password);
 
         User user = new User(username, password);
         try{
@@ -104,5 +104,18 @@ public class UserController {
     @ResponseBody
     public List<ObjectNode> getAllGameScores(){
         return customUserDetailsService.getAllGameScores();
+    }
+
+
+    @RequestMapping(value="/getUserGameScore/{username}")
+    @ResponseBody
+    public int getUserGameScore(@PathVariable String username){
+        try {
+            return customUserDetailsService.getUserGameScore(username);
+        } catch (Exception e){
+            System.out.println(e);
+            return -2;
+        }
+
     }
 }

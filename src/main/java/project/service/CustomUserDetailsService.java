@@ -67,4 +67,6 @@ public interface CustomUserDetailsService extends UserDetailsService {
     boolean newGameScore(String username, int score);
 
     List<ObjectNode> getAllGameScores();
+
+    int getUserGameScore(String username) throws Exception;
 }

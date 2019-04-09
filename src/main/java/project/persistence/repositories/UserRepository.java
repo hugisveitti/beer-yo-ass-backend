@@ -43,4 +43,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value= "SELECT u.username, u.gameScore FROM User u")
     List<Object> getAllGameScores();
 
+    @Query(value="SELECT u.gameScore FROM User u WHERE u.username = ?1")
+    int getUserGameScore(String username);
+
 }

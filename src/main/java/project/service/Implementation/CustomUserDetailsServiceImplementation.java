@@ -164,4 +164,9 @@ public class CustomUserDetailsServiceImplementation implements CustomUserDetails
         }
         return jsonArr;
     }
+
+    @Override
+    public int getUserGameScore(String username) throws Exception {
+        return repository.getUserGameScore(username);
+    }
 }
