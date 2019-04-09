@@ -172,6 +172,8 @@ post request
 <br />
 /createDrinklist/{username}/{name}/{public}
 <br />
+{public} is boolean and represents if the drinklist is public or private
+<br />
 <br />
 post request to 
 <br />
@@ -190,6 +192,20 @@ post request to
 /deleteDrinklist/{username}/{drinklistId}
 <br />
 <br/>
+
+### GameScore
+post request to
+<br />
+/newGameScore/{username}/{score}
+<br />
+{score} is int and {username} is string
+<br />
+<br />
+get request to
+<br />
+/getAllGameScores
+<br />
+To get all game scores
 
 
 
