@@ -132,6 +132,14 @@ public class Drinklist {
         this.checkedBeers = checkedBeers;
     }
 
+    public Long getDrinklistId() {
+        return drinklistId;
+    }
+
+    public void setDrinklistId(Long drinklistId) {
+        this.drinklistId = drinklistId;
+    }
+
     //when the user opens a drinklist, he will see two types of beer lists, one with checked beers and one with unchecked beers.
     public List<ObjectNode> getObjectNodeuncheckedBeers(){
         List<ObjectNode> allBeers = new ArrayList<>();

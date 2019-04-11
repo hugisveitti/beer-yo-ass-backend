@@ -42,7 +42,7 @@ public class DrinklistController {
     //post request
     @RequestMapping("/createDrinklist/{username}/{name}/{isPublic}")
     @ResponseBody
-    public ObjectNode createDrinklist(@PathVariable String username, @PathVariable String name, @PathVariable boolean isPublic){
+    public Long createDrinklist(@PathVariable String username, @PathVariable String name, @PathVariable boolean isPublic){
         return drinklistService.createDrinklist(username, name, isPublic);
 
     }

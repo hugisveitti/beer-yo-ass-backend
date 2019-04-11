@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import project.persistence.entities.Beer;
+import project.persistence.entities.Drinklist;
+import project.persistence.repositories.BeerRepository;
 import project.persistence.repositories.RoleRepository;
 import project.persistence.entities.Role;
 import project.persistence.entities.User;
@@ -26,12 +28,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import project.service.DrinklistService;
 
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -56,12 +60,14 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
     private RoleRepository roleRepository;
     private CustomUserDetailsService userService;
     private BeerService beerService;
+    private DrinklistService drinklistService;
 
     @Autowired
-    public InitialDataLoader(RoleRepository roleRepository, CustomUserDetailsService userService, BeerService beerService){
+    public InitialDataLoader(RoleRepository roleRepository, CustomUserDetailsService userService, BeerService beerService, DrinklistService drinklistService){
         this.roleRepository = roleRepository;
         this.userService = userService;
         this.beerService = beerService;
+        this.drinklistService = drinklistService;
     }
 
     @Override
@@ -116,9 +122,22 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
             System.out.println(e);
         }
 
+
+
+        //create a drinklist for user
+
+        Long drinklistId = drinklistService.createDrinklist("hugi", "EasterBeers", true);
+
+        String[] allIds = {"24058", "23899", "25116", "18853", "21913", "23149"};
+        for(String id: allIds){
+            drinklistService.addToDrinklist("hugi", drinklistId, id);
+        }
+
+
+
     }
 
-    @Transactional
+//    @Transactional
     private void createRoleIfNotFound(String name) {
 
         Role role = roleRepository.findByRole(name);
