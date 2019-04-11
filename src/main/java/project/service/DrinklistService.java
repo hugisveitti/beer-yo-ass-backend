@@ -10,7 +10,7 @@ public interface DrinklistService {
 
     List<ObjectNode> getAllPublicDrinklists();
 
-    Long createDrinklist(String username, String name, boolean isPublic);
+    ObjectNode createDrinklist(String username, String name, boolean isPublic);
 
     ObjectNode addToDrinklist(String username, Long drinklistId, String beerId);
 

@@ -126,12 +126,12 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
 
         //create a drinklist for user
 
-        Long drinklistId = drinklistService.createDrinklist("hugi", "EasterBeers", true);
-
-        String[] allIds = {"24058", "23899", "25116", "18853", "21913", "23149"};
-        for(String id: allIds){
-            drinklistService.addToDrinklist("hugi", drinklistId, id);
-        }
+//        Long drinklistId = drinklistService.createDrinklist("hugi", "EasterBeers", true);
+//
+//        String[] allIds = {"24058", "23899", "25116", "18853", "21913", "23149"};
+//        for(String id: allIds){
+//            drinklistService.addToDrinklist("hugi", drinklistId, id);
+//        }
 
 
 

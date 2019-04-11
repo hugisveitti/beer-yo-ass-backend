@@ -43,12 +43,12 @@ public class DrinklistServiceImplementation implements DrinklistService {
     }
 
     @Override
-    public Long createDrinklist(String username, String name, boolean isPublic) {
+    public ObjectNode createDrinklist(String username, String name, boolean isPublic) {
         User user = userRepository.findByUsername(username);
         Drinklist drinklist = new Drinklist(name, isPublic);
         user.addDrinklist(drinklist);
         drinklistRepository.save(drinklist);
-        return drinklist.getDrinklistId();
+        return drinklist.getJSONDrinklist();
     }
 
     @Override
